@@ -1,0 +1,20 @@
+#level1 span {
+    border: 1px solid black;
+    padding: 20px;
+    max-width: 50px;
+    margin: 5px;
+}
+
+div {
+    margin-top: 30px;
+}
+
+#letters span {
+    padding: 10px;
+    border: 2px solid blue;
+    background-color: yellow;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
