@@ -13,6 +13,7 @@ const playWord = LEVEL1[Math.floor(Math.random() * LEVEL1.length)];
 const winner = document.getElementById('winner');
 const guess = document.getElementById('guessAgain');
 const tries = document.getElementById('numberTries');
+const hangman = document.getElementById('Hangman');
 
 const pickLetters = document.getElementById('letters');
 const a = document.getElementById('A');
