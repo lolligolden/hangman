@@ -113,6 +113,7 @@ function activea() {
     setTimeout(function () { guess.textContent = "" }, 3000);
     numberTries++;
     tries.textContent = `Tries: ${6 - numberTries}`;
+    displayHangman();
     winnerLoser();
 }
 function activeb() {
@@ -138,6 +139,7 @@ function activeb() {
     setTimeout(function () { guess.textContent = "" }, 3000);
     numberTries++;
     tries.textContent = `Tries: ${6 - numberTries}`;
+    displayHangman();
     winnerLoser();
 }
 function activec() {
@@ -163,6 +165,7 @@ function activec() {
     setTimeout(function () { guess.textContent = "" }, 3000);
     numberTries++;
     tries.textContent = `Tries: ${6 - numberTries}`;
+    displayHangman();
     winnerLoser();
 
 
@@ -190,6 +193,7 @@ function actived() {
     setTimeout(function () { guess.textContent = "" }, 3000);
     numberTries++;
     tries.textContent = `Tries: ${6 - numberTries}`;
+    displayHangman();
     winnerLoser();
 
 
@@ -217,6 +221,7 @@ function activee() {
     setTimeout(function () { guess.textContent = "" }, 3000);
     numberTries++;
     tries.textContent = `Tries: ${6 - numberTries}`;
+    displayHangman();
     winnerLoser();
 
 
@@ -244,6 +249,7 @@ function activef() {
     setTimeout(function () { guess.textContent = "" }, 3000);
     numberTries++;
     tries.textContent = `Tries: ${6 - numberTries}`;
+    displayHangman();
     winnerLoser();
 
 
@@ -271,6 +277,7 @@ function activeg() {
     setTimeout(function () { guess.textContent = "" }, 3000);
     numberTries++;
     tries.textContent = `Tries: ${6 - numberTries}`;
+    displayHangman();
     winnerLoser();
 
 
@@ -298,6 +305,7 @@ function activeh() {
     setTimeout(function () { guess.textContent = "" }, 3000);
     numberTries++;
     tries.textContent = `Tries: ${6 - numberTries}`;
+    displayHangman();
     winnerLoser();
 
 
@@ -325,6 +333,7 @@ function activei() {
     setTimeout(function () { guess.textContent = "" }, 3000);
     numberTries++;
     tries.textContent = `Tries: ${6 - numberTries}`;
+    displayHangman();
     winnerLoser();
 
 
@@ -352,6 +361,7 @@ function activej() {
     setTimeout(function () { guess.textContent = "" }, 3000);
     numberTries++;
     tries.textContent = `Tries: ${6 - numberTries}`;
+    displayHangman();
     winnerLoser();
 
 
@@ -379,6 +389,7 @@ function activek() {
     setTimeout(function () { guess.textContent = "" }, 3000);
     numberTries++;
     tries.textContent = `Tries: ${6 - numberTries}`;
+    displayHangman();
     winnerLoser();
 }
 function activel() {
@@ -404,6 +415,7 @@ function activel() {
     setTimeout(function () { guess.textContent = "" }, 3000);
     numberTries++;
     tries.textContent = `Tries: ${6 - numberTries}`;
+    displayHangman();
     winnerLoser();
 }
 function activem() {
@@ -429,6 +441,7 @@ function activem() {
     setTimeout(function () { guess.textContent = "" }, 3000);
     numberTries++;
     tries.textContent = `Tries: ${6 - numberTries}`;
+    displayHangman();
     winnerLoser();
 }
 function activen() {
@@ -454,6 +467,7 @@ function activen() {
     setTimeout(function () { guess.textContent = "" }, 3000);
     numberTries++;
     tries.textContent = `Tries: ${6 - numberTries}`;
+    displayHangman();
     winnerLoser();
 
 }
@@ -480,6 +494,7 @@ function activeo() {
     setTimeout(function () { guess.textContent = "" }, 3000);
     numberTries++;
     tries.textContent = `Tries: ${6 - numberTries}`;
+    displayHangman();
     winnerLoser();
 
 
@@ -507,6 +522,7 @@ function activep() {
     setTimeout(function () { guess.textContent = "" }, 3000);
     numberTries++;
     tries.textContent = `Tries: ${6 - numberTries}`;
+    displayHangman();
     winnerLoser();
 }
 function activeq() {
@@ -532,6 +548,7 @@ function activeq() {
     setTimeout(function () { guess.textContent = "" }, 3000);
     numberTries++;
     tries.textContent = `Tries: ${6 - numberTries}`;
+    displayHangman();
     winnerLoser();
 }
 function activer() {
@@ -557,6 +574,7 @@ function activer() {
     setTimeout(function () { guess.textContent = "" }, 3000);
     numberTries++;
     tries.textContent = `Tries: ${6 - numberTries}`;
+    displayHangman();
     winnerLoser();
 }
 function actives() {
@@ -582,6 +600,7 @@ function actives() {
     setTimeout(function () { guess.textContent = "" }, 3000);
     numberTries++;
     tries.textContent = `Tries: ${6 - numberTries}`;
+    displayHangman();
     winnerLoser();
 }
 function activet() {
@@ -607,6 +626,7 @@ function activet() {
     setTimeout(function () { guess.textContent = "" }, 3000);
     numberTries++;
     tries.textContent = `Tries: ${6 - numberTries}`;
+    displayHangman();
     winnerLoser();
 }
 function activeu() {
@@ -632,6 +652,7 @@ function activeu() {
     setTimeout(function () { guess.textContent = "" }, 3000);
     numberTries++;
     tries.textContent = `Tries: ${6 - numberTries}`;
+    displayHangman();
     winnerLoser();
 }
 function activev() {
@@ -657,6 +678,7 @@ function activev() {
     setTimeout(function () { guess.textContent = "" }, 3000);
     numberTries++;
     tries.textContent = `Tries: ${6 - numberTries}`;
+    displayHangman();
     winnerLoser();
 
 }
@@ -684,6 +706,7 @@ function activew() {
     setTimeout(function () { guess.textContent = "" }, 3000);
     numberTries++;
     tries.textContent = `Tries: ${6 - numberTries}`;
+    displayHangman();
     winnerLoser();
 
 }
@@ -710,6 +733,7 @@ function activex() {
     setTimeout(function () { guess.textContent = "" }, 3000);
     numberTries++;
     tries.textContent = `Tries: ${6 - numberTries}`;
+    displayHangman();
     winnerLoser();
 
 }
@@ -736,6 +760,7 @@ function activey() {
     setTimeout(function () { guess.textContent = "" }, 3000);
     numberTries++;
     tries.textContent = `Tries: ${6 - numberTries}`;
+    displayHangman();
     winnerLoser();
 
 }
@@ -762,8 +787,20 @@ function activez() {
     setTimeout(function () { guess.textContent = "" }, 3000);
     numberTries++;
     tries.textContent = `Tries: ${6 - numberTries}`;
+    displayHangman();
     winnerLoser();
 }
+
+function displayHangman() {
+    switch (numberTries === 1 && guess.textContent === "Please try again!") {
+        case '1': hangman.setAttribute('src', './images/hangmanhead');
+        case '2': hangman.setAttribute('src', './images/hangmantorso');
+        case '3': hangman.setAttribute('src', './images/hangmanLarm');
+        case '4': hangman.setAttribute('src', './images/hangmanRarm');
+        case '5': hangman.setAttribute('src', './images/hangmanLleg');
+        case '6': hangman.setAttribute('src', './images/hangmanRleg');
+    };
+ }
 
 
 
