@@ -1,3 +1,6 @@
+window.onload = alert(`Hello, Player! Let's play Hangman! Press the "Play Hangman" button to begin.`);
+
+
 const LEVEL1 = ["abbey", "acorn", "adage", "after", "agile", "ahead", "aisle", "alarm", "aorta", "awake", 
                 "basin", "bacon", "banjo", "berth", "beast", "binge", "bland", "bonus", "brawn", "bride", 
                 "cabal", "caste", "caulk", "chalk", "chaos", "civil", "claim", "color", "crawl", "coven", 
@@ -34,6 +37,7 @@ let level1Letter5 = document.getElementById('l5');
 
 let playHangman = [];
 const playWordlvl1 = LEVEL1[Math.floor(Math.random() * LEVEL1.length)];
+const playWordlvl102 = LEVEL1[Math.floor(Math.random() * LEVEL1.length)];
 
 
 const winner = document.getElementById('winner');
@@ -41,6 +45,7 @@ const guess = document.getElementById('guessAgain');
 const tries = document.getElementById('numberTries');
 const hangman = document.getElementById('Hangman');
 const next = document.getElementById('next');
+const nextWord = document.getElementById('nextWord');
 const reset = document.getElementById('reset');
 
 const pickLetters = document.getElementById('letters');
@@ -78,9 +83,52 @@ let tryAgain = 0;
 
 function chooseWordLevel1() {
     playHangman.push(playWordlvl1);
-    console.log(playWordlvl1);
+    console.log(playWordlvl1, playHangman);
+    if (playHangman.includes(playWordlvl1)) {
+        guess.textContent = `If the letters below have turned blue, a word has
+        been chosen. Pick a letter to begin`;
+    }
     pickLetters.style.color = "blue";
     activateletters();
+}
+
+function chooseNextWordlvl102() {
+    level1Letter1.textContent = '';
+    level1Letter2.textContent = '';
+    level1Letter3.textContent = '';
+    level1Letter4.textContent = '';
+    level1Letter5.textContent = '';
+    a.style.textDecoration = 'none';
+    b.style.textDecoration = 'none';
+    c.style.textDecoration = 'none';
+    d.style.textDecoration = 'none';
+    e.style.textDecoration = 'none';
+    f.style.textDecoration = 'none';
+    g.style.textDecoration = 'none';
+    h.style.textDecoration = 'none';
+    i.style.textDecoration = 'none';
+    j.style.textDecoration = 'none';
+    k.style.textDecoration = 'none';
+    l.style.textDecoration = 'none';
+    m.style.textDecoration = 'none';
+    n.style.textDecoration = 'none';
+    o.style.textDecoration = 'none';
+    p.style.textDecoration = 'none';
+    q.style.textDecoration = 'none';
+    r.style.textDecoration = 'none';
+    s.style.textDecoration = 'none';
+    t.style.textDecoration = 'none';
+    u.style.textDecoration = 'none';
+    v.style.textDecoration = 'none';
+    w.style.textDecoration = 'none';
+    x.style.textDecoration = 'none';
+    y.style.textDecoration = 'none';
+    z.style.textDecoration = 'none';
+    winner.textContent = '';
+
+
+    playHangman.push(playWordlvl102);
+    console.log(playWordlvl1, playHangman);
 }
 
 const playLevel2 = document.getElementById('btnlvl2');
@@ -88,8 +136,8 @@ const playLevel2 = document.getElementById('btnlvl2');
 let numberTrieslvl2 = 0;
 
 function chooseWordLevel2() {
-    playHangman.push(playWord);
-    console.log(playWord);
+    playHangman.push(playWordlvl2);
+    console.log(playWordlvl2);
     pickLetters.style.color = "blue";
     activateletters();
 }
@@ -945,10 +993,10 @@ function winnerLoser() {
         winner.textContent = "WINNER!!! YOU WIN HANGMAN!";
         moveAnnouncement();
         winningTimeslvl1 += 1;
-        if (playHangman.length <= 5 && winningTimeslvl1 <= 5 ) {
+        if ((playHangman.length === 1) && (winningTimeslvl1 === 1) ) {
             const play = document.getElementById('play');
-            next.addEventListener('click', chooseWordLevel1(playWordlvl1));
-            winner.textContent = "Play next word"
+            next.addEventListener('click', chooseNextWordlvl102);
+            nextWord.textContent = "Press the Next Word button to play the next word";
         } else {
             chooseWordLevel2(playWordlvl2);
         }
@@ -979,10 +1027,9 @@ function moveAnnouncement() {
 
 
 
-// * Give player insructions to play Game and when a word has been chosen. - Could make it an alert
 // * Let player know what the correct word was when they have lost the round.
 // * Set up words for levels 
-// * Set up game to go to the next level
+// * Set up game to go to the next level and reset number of Tries counter and
 // * Dress up the look!
 // * Make sure that duplicate words are not selected for player 
 // * Trim down the boxes to match the number of letters in the word
