@@ -1,54 +1,83 @@
 window.onload = alert(`Hello, Player! Let's play Hangman! Press the "Play Hangman" button to begin.`);
 
 
-const LEVEL1 = ["abbey", "acorn", "adage", "after", "agile", "ahead", "aisle", "alarm", "aorta", "awake", 
+const LEVEL1 = ["acorn", "after", "agile", "aisle",  
                 "basin", "bacon", "banjo", "berth", "beast", "binge", "bland", "bonus", "brawn", "bride", 
-                "cabal", "caste", "caulk", "chalk", "chaos", "civil", "claim", "color", "crawl", "coven", 
-                "datum", "death", "debit", "depot", "diner", "dirty", "dodge", "dress", "duvet", "dwarf", 
-                "eagle", "ebony", "edict", "elect", "ember", "empty", "endow", "enemy", "erupt", "exile", 
-                "fable", "facet", "fancy", "feign", "felon", "fever", "flare", "flash", "forgo", "fudge", 
-                "gamut", "gawky", "genre", "geode", "given", "goose", "grass", "grate", "grift", "gypsy", 
-                "habit", "hands", "hazel", "heavy", "hedge", "hiker", "hoard", "hobby", "human", "hyena", 
-                "ideal", "image", "imply", "inane", "infer", "inlet", "irony", "islet", "issue", "ivory", 
-                "jaded", "jaunt", "jetty", "jewel", "joint", "joker", "joust", "judge", "juice", "jumps", 
-                "kappa", "karma", "kebab", "khaki", "kiosk", "knack", "knead", "knife", "known", "koala", 
-                "label", "labor", "laser", "laugh", "learn", "ledge", "legal", "lemon", "llama", "lurch", 
-                "madam", "manor", "match", "melon", "might", "minor", "moist", "molar", "moral", "mouth", 
-                "nadir", "naval", "nerve", "niece", "never", "night", "noble", "novel", "nurse", "nymph", 
-                "obese", "ocean", "octet", "often", "olden", "omega", "oozes", "organ", "overt", "ozone", 
-                "pagan", "pasta", "panel", "pearl", "phone", "plain", "plane", "plead", "poach", "purge", 
-                "quack", "quail", "qualm", "queen", "queue", "quest", "quiet", "quilt", "quirk", "quote", 
-                "rabbi", "radio", "rally", "ratio", "ready", "reign", "rhyme", "ridge", "round", "rural", 
-                "sable", "satin", "sauna", "scale", "scope", "seize", "shawl", "skull", "sling", "snore", 
-                "talon", "taste", "teeth", "theme", "tiger", "toque", "totem", "toxic", "tweak", "twine", 
-                "udder", "ulcer", "uncut", "under", "unite", "upend", "upset", "urban", "usual", "usurp", 
-                "vague", "value", "vapor", "vicar", "virus", "visor", "vivid", "vixen", "voice", "vowel", 
-                "wagon", "waltz", "water", "weird", "wheat", "widow", "witch", "world", "worse", "wrath", 
-                "xerox", "xylem", "xylol", 
-                "yahoo", "yards", "yearn", "yeast", "yield", "yikes", "yodel", "yogis", "youth", "yummy", 
-                "zebra", "zesty", "zingy", "zones", "zooms"];
-const LEVEL2 = []
+                "caste", "caulk", "chalk", "chaos", "claim", "crawl", "coven", 
+                "datum", "death", "debit", "depot", "diner", "dirty", "duvet", "dwarf", 
+                "ebony", "edict", "empty", "endow", "erupt",  
+                "fable", "facet", "fancy", "feign", "felon", "flare", "flash", "fudge", 
+                "gamut", "gawky", "given", "grate", "grift",  
+                "habit", "hands", "hazel", "heavy", "hiker", "hoard", "human", "hyena", 
+                "ideal", "image", "imply", "infer", "inlet", "irony", "islet", "ivory", 
+                "jaunt", "joint", "joker", "joust", "judge", "juice", "jumps", 
+                "karma", "knead", "knife",  
+                "labor", "laser", "laugh", "learn", "lemon", "lurch", 
+                "manor", "match", "melon", "might", "minor", "moist", "molar", "moral", "mouth", 
+                "nadir", "night", "noble", "novel", "nurse", "nymph", 
+                "ocean", "often", "olden", "omega", "organ", "overt",  
+                "panel", "pearl", "phone", "plain", "plane", "plead", "poach", "purge", 
+                "quack", "quail", "qualm", "quest", "quiet", "quilt", "quirk", "quote", 
+                "radio", "ratio", "ready", "reign", "rhyme", "ridge", "round", , 
+                "sable", "satin", "scale", "scope", "shawl", "sling", "snore", 
+                "talon", "tiger", "toque", "toxic", "tweak", "twine", 
+                "ulcer", "under", "unite", "upend", "upset", "urban", 
+                "vague", "value", "vapor", "vicar", "virus", "visor", "vixen", "voice", "vowel", 
+                "wagon", "waltz", "water", "weird", "wheat", "witch", "world", "worse", "wrath", 
+                "xylem",  
+                "yards", "yearn", "yeast", "yield", "yikes", "yodel", "yogis", "youth", 
+                "zebra", "zesty", "zingy", "zones"];
 
-let level1Letter1 = document.getElementById('l1');
-let level1Letter2 = document.getElementById('l2');
-let level1Letter3 = document.getElementById('l3');
-let level1Letter4 = document.getElementById('l4');
-let level1Letter5 = document.getElementById('l5');
+const LEVEL2 = ["abound", "action", "actual", "adjust", "adrift", "anchor",
+                "barley", "become", "behold", "bestow", "broken", "budget",
+                "cajole", "cardio", "chisel",   
+                "dainty", "design", "diatom", "digest", "donate", "dorsal", "dragon", 
+                "editor", "enigma",
+                "fabric", "falcon", "faucet", "fiasco", 
+                "gained", "glance", "golden", "gravel", 
+                "hacker", "hairdo", "halter", "hanger", "herald", "hernia", "hockey", 
+                "import", "induct", "inform", "insect",  
+                "jacket", "jigsaw", "jostle", "jovial", "jumble", "junior", "jungle", "junket",
+                "kernel", "keypad", "kibosh", "kidnap", "kismet",
+                "lawyer", "liquor", "lumbar", "luster",
+                "magnet", "makeup", "malice", "mature", "median", "mirage", 
+                "napkin", "nebula", "nectar", "number", "nutmeg",
+                "object", "oblige", "octane", "ocular", "opaque", "orange", "orphan", "oxygen", "oyster",
+                "pantry", "pastel", "permit", "placid", "postal", 
+                "quaint", "quartz", "queasy", "quench", "quince", "quinoa", "quiche", "quirky", "quiver", 
+                "ramble", "rancid", "random",  
+                "sachet", "sacred", "sailor", "saline", "search", "shrunk", "silver", 
+                "tackle", "tailor", "target", "teacup", "tongue", "triple",
+                "umpire", "unable", "unwrap", "upbeat", "uphold", "uptake", "urgent", "utopia", 
+                "vanish", "vector", "vendor", "verbal", "virtue", "visual", "vortex",
+                "waiter", "walker", "wanted", "warmth", "watery", "weight", "widget", "wisdom", 
+                "yarrow", "yellow", "yogurt", "yonder", 
+                "zealot", "zodiac", "zombie"];
+                    
+const level= document.getElementById('level');
+const letter = document.getElementsByTagName('span');
+const level1Letter1 = letter[0];
+const level1Letter2 = letter[1];
+const level1Letter3 = letter[2];
+const level1Letter4 = letter[3];
+const level1Letter5 = letter[4];
+
 
 let playHangman = [];
 const playWordlvl1 = LEVEL1[Math.floor(Math.random() * LEVEL1.length)];
-const playWordlvl102 = LEVEL1[Math.floor(Math.random() * LEVEL1.length)];
+const playWordlvl2 = LEVEL2[Math.floor(Math.random() * LEVEL2.length)];
 
 
 const winner = document.getElementById('winner');
 const guess = document.getElementById('guessAgain');
 const tries = document.getElementById('numberTries');
 const hangman = document.getElementById('Hangman');
-const next = document.getElementById('next');
-const nextWord = document.getElementById('nextWord');
+const nextLevel = document.getElementById('nextLevel');
 const reset = document.getElementById('reset');
+const resetSpan = document.getElementById('resetSpan');
 
-const pickLetters = document.getElementById('letters');
+const pickLettersRow1 = document.getElementById('lettersRow1');
+const pickLettersRow2 = document.getElementById('lettersRow2');
 const a = document.getElementById('A');
 const b = document.getElementById('B');
 const c = document.getElementById('C');
@@ -83,16 +112,18 @@ let tryAgain = 0;
 
 function chooseWordLevel1() {
     playHangman.push(playWordlvl1);
-    console.log(playWordlvl1, playHangman);
+    console.log(playWordlvl1);
     if (playHangman.includes(playWordlvl1)) {
         guess.textContent = `If the letters below have turned blue, a word has
         been chosen. Pick a letter to begin`;
     }
-    pickLetters.style.color = "blue";
+    pickLettersRow1.style.color = "blue";
+    pickLettersRow2.style.color = "blue";
     activateletters();
 }
 
-function chooseNextWordlvl102() {
+function chooseWordLevel2() {
+    playLevel.textContent = 'Level 2 - 6 Letter Words';
     level1Letter1.textContent = '';
     level1Letter2.textContent = '';
     level1Letter3.textContent = '';
@@ -125,24 +156,19 @@ function chooseNextWordlvl102() {
     y.style.textDecoration = 'none';
     z.style.textDecoration = 'none';
     winner.textContent = '';
-
-    playHangman.push(playWordlvl102);
-    console.log(playWordlvl102, playHangman);
-    if (playWordlvl102 === playWordlvl1) {
-        playHangman.pop();
-        playHangman.push(playWordlvl102);
-    }
-}
-
-const playLevel2 = document.getElementById('btnlvl2');
-// playLevel2.addEventListener('click', chooseWordLevel2);
-let numberTrieslvl2 = 0;
-
-function chooseWordLevel2() {
+    
+    playHangman.pop();
     playHangman.push(playWordlvl2);
     console.log(playWordlvl2);
-    pickLetters.style.color = "blue";
+    pickLettersRow1.style.color = "blue";
+    pickLettersRow2.style.color = "blue";
     activateletters();
+    const addSquarelvl2 = document.createElement('span');
+    addSquarelvl2.setAttribute('id', 'L6');
+    level1Letter5.insertAdjacentElement('afterend', addSquarelvl2);
+    numberTries = 0;
+    tryAgain = 0;
+    tries.textContent = `# of Tries: ${6}`;
 }
 
 function resetWindow() {
@@ -150,8 +176,6 @@ function resetWindow() {
 }
 
 reset.addEventListener('click', resetWindow);
-
-
 
 // Activate letters for Player to select
 
@@ -185,31 +209,58 @@ function activateletters() {
     if (z.addEventListener('click', activez));
 }
 
-
-
 function activea() {
     a.style.textDecoration = "line-through";
-    if ((playWordlvl1[0] === "a") || (playWordlvl102[0] === "a")) {
-        level1Letter1.textContent = "A";
+    if (playHangman.includes(playWordlvl1)) {
+        if (playWordlvl1.charAt(0) === "a") {
+            level1Letter1.textContent = "A"; 
+        }
+        if (playWordlvl1.charAt(1) === "a") {
+            level1Letter2.textContent = "A"; 
+        }
+        if (playWordlvl1.charAt(2) === "a") {
+            level1Letter3.textContent = "A"; 
+        }
+        if (playWordlvl1.charAt(3) === "a") {
+            level1Letter4.textContent = "A"; 
+        }
+        if (playWordlvl1.charAt(4) === "a") {
+            level1Letter5.textContent = "A"; 
+        }
+        if (!playWordlvl1.includes("a")) { 
+            guess.textContent = "Please try again!";
+            tryAgain++;
+        }     
     }
-    if ((playWordlvl1[1] === "a") || (playWordlvl102[1] === "a")) {
-        level1Letter2.textContent = "A";
+
+    if (playHangman.includes(playWordlvl2)) {
+        let level1Letter6 = document.getElementById('L6');
+        if (playWordlvl2.charAt(0) === "a") {
+            level1Letter1.textContent = "A"; 
+        }
+        if (playWordlvl2.charAt(1) === "a") {
+            level1Letter2.textContent = "A"; 
+        }
+        if (playWordlvl2.charAt(2) === "a") {
+            level1Letter3.textContent = "A"; 
+        }
+        if (playWordlvl2.charAt(3) === "a") {
+            level1Letter4.textContent = "A"; 
+        }
+        if (playWordlvl2.charAt(4) === "a") {
+            level1Letter5.textContent = "A"; 
+        }
+        if (playWordlvl2.charAt(5) === "a") {
+            level1Letter6.textContent = "A"; 
+        }
+        if (!playWordlvl2.includes("a")) {
+            guess.textContent = "Please try again!";
+            tryAgain++;
+        }   
     }
-    if ((playWordlvl1[2] === "a") || (playWordlvl102[2] === "a")) {
-        level1Letter3.textContent = "A";
-    }
-    if ((playWordlvl1[3] === "a") || (playWordlvl102[3] === 'a')) {
-        level1Letter4.textContent = "A";
-    }
-    if ((playWordlvl1[4] === "a") || (playWordlvl102[4] === "a")) {
-        level1Letter4.textContent = 'A';
-    }
-    if ((!playWordlvl1.includes("a")) || (!playWordlvl102.includes("a"))) {
-        guess.textContent = "Please try again!";
-        tryAgain += 1;
-    }
+    
     setTimeout(function() {guess.textContent = ""}, 3000);
-    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl102))) {
+    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl2))) {
         numberTries++;
     };
     tries.textContent = `# of Tries: ${6 - numberTries}`;
@@ -219,56 +270,114 @@ function activea() {
 
 function activeb() {
     b.style.textDecoration = "line-through";
-    if ((playWordlvl1[0] === "b") || (playWordlvl102[0] === "b")) {
-        level1Letter1.textContent = "B";
+    if (playHangman.includes(playWordlvl1)) {
+        if (playWordlvl1.charAt(0) === "b") {
+            level1Letter1.textContent = "B"; 
+        }
+        if (playWordlvl1.charAt(1) === "b") {
+            level1Letter2.textContent = "B"; 
+        }
+        if (playWordlvl1.charAt(2) === "b") {
+            level1Letter3.textContent = "B"; 
+        }
+        if (playWordlvl1.charAt(3) === "b") {
+            level1Letter4.textContent = "B"; 
+        }
+        if (playWordlvl1.charAt(4) === "b") {
+            level1Letter5.textContent = "B"; 
+        }
+        if (!playWordlvl1.includes("b")) {
+            guess.textContent = "Please try again!";
+            tryAgain++;
+        }
     }
-    if ((playWordlvl1[1] === "b") || (playWordlvl102[1] === "b")) {
-        level1Letter2.textContent = "B";
+
+    if (playHangman.includes(playWordlvl2)) {
+        let level1Letter6 = document.getElementById('L6');
+        if (playWordlvl2.charAt(0) === "b") {
+            level1Letter1.textContent = "B"; 
+        }
+        if (playWordlvl2.charAt(1) === "b") {
+            level1Letter2.textContent = "B"; 
+        }
+        if (playWordlvl2.charAt(2) === "b") {
+            level1Letter3.textContent = "B"; 
+        }
+        if (playWordlvl2.charAt(3) === "b") {
+            level1Letter4.textContent = "B"; 
+        }
+        if (playWordlvl2.charAt(4) === "b") {
+            level1Letter5.textContent = "B"; 
+        }
+        if (playWordlvl2.charAt(5) === "b") {
+            level1Letter6.textContent = "B"; 
+        }
+        if (!playWordlvl2.includes("b")) {
+            guess.textContent = "Please try again!";
+            tryAgain++;
+        }
     }
-    if ((playWordlvl1[2] === "b") || (playWordlvl102[2] === "b")) {
-        level1Letter3.textContent = "B";
-    }
-    if ((playWordlvl1[3] === "b") || (playWordlvl102[3] === "b")) {
-        level1Letter4.textContent = "B";
-    }
-    if ((playWordlvl1[4] === "b") || (playWordlvl102[4] === "b")) {
-        level1Letter5.textContent = "B";
-    }
-    if ((!playWordlvl1.includes("b")) || (!playWordlvl102.includes("b"))) {
-        guess.textContent = "Please try again!";
-        tryAgain += 1;
-    }
+
     setTimeout(function() {guess.textContent = ""}, 3000);
-    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl102))) {
+    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl2))) {
         numberTries++;
     };
     tries.textContent = `# of Tries: ${6 - numberTries}`;
     displayHangman();
     winnerLoser();
 }
+
 function activec() {
     c.style.textDecoration = "line-through";
-    if ((playWordlvl1[0] === "c") || (playWordlvl102[0] === "c")) {
-        level1Letter1.textContent = "C";
+    if (playHangman.includes(playWordlvl1)) {
+        if (playWordlvl1.charAt(0) === "c") {
+            level1Letter1.textContent = "C"; 
+        }
+        if (playWordlvl1.charAt(1) === "c") {
+            level1Letter2.textContent = "C"; 
+        }
+        if (playWordlvl1.charAt(2) === "c") {
+            level1Letter3.textContent = "C"; 
+        }
+        if (playWordlvl1.charAt(3) === "c") {
+            level1Letter4.textContent = "C"; 
+        }
+        if (playWordlvl1.charAt(4) === "c") {
+            level1Letter5.textContent = "C"; 
+        }
+        if (!playWordlvl1.includes("c")) {
+            guess.textContent = "Please try again!";
+            tryAgain++;
+        } 
     }
-    if ((playWordlvl1[1] === "c") || (playWordlvl102[1] === "c")) {
-        level1Letter2.textContent = "C";
+
+    if (playHangman.includes(playWordlvl2)) {
+        let level1Letter6 = document.getElementById('L6');
+        if (playWordlvl2.charAt(0) === "c") {
+            level1Letter1.textContent = "C"; 
+        }
+        if (playWordlvl2.charAt(1) === "c") {
+            level1Letter2.textContent = "C"; 
+        }
+        if (playWordlvl2.charAt(2) === "c") {
+            level1Letter3.textContent = "C"; 
+        }
+        if (playWordlvl2.charAt(3) === "c") {
+            level1Letter4.textContent = "C"; 
+        }
+        if (playWordlvl2.charAt(4) === "c") {
+            level1Letter5.textContent = "C"; 
+        }  
+        if (playWordlvl2.charAt(5) === "c") {
+            level1Letter6.textContent = "C"; 
+        }
+        if (!playWordlvl2.includes("c")) {
+            guess.textContent = "Please try again!";
+        }
     }
-    if ((playWordlvl1[2] === "c") || (playWordlvl102[2] === "c")) {
-        level1Letter3.textContent = "C";
-    }
-    if ((playWordlvl1[3] === "c") || (playWordlvl102[3] === "c")) {
-        level1Letter4.textContent = "C";
-    }
-    if ((playWordlvl1[4] === "c") || (playWordlvl102[4] === "c")) {
-        level1Letter5.textContent = "C";
-    }
-    if ((!playWordlvl1.includes("c")) || (!playWordlvl102.includes("c"))) {
-        guess.textContent = "Please try again!";
-        tryAgain += 1;
-    }
+
     setTimeout(function() {guess.textContent = ""}, 3000);
-    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl102))) {
+    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl2))) {
         numberTries++;
     };
     tries.textContent = `# of Tries: ${6 - numberTries}`;
@@ -278,27 +387,56 @@ function activec() {
 
 function actived() {
     d.style.textDecoration = "line-through";
-    if ((playWordlvl1[0] === "d") || (playWordlvl1[0] === "d")) {
-        level1Letter1.textContent = "D";
+    if (playHangman.includes(playWordlvl1)) {
+        if (playWordlvl1.charAt(0) === "d") {
+            level1Letter1.textContent = "D"; 
+        }
+        if (playWordlvl1.charAt(1) === "d") {
+            level1Letter2.textContent = "D"; 
+        }
+        if (playWordlvl1.charAt(2) === "d") {
+            level1Letter3.textContent = "D"; 
+        }
+        if (playWordlvl1.charAt(3) === "d") {
+            level1Letter4.textContent = "D"; 
+        }
+        if (playWordlvl1.charAt(4) === "d") {
+            level1Letter5.textContent = "D"; 
+        }    
+        if (!playWordlvl1.includes("d")) {
+            guess.textContent = "Please try again!";
+            tryAgain++;
+        }
     }
-    if ((playWordlvl1[1] === "d") || (playWordlvl102[1] === "d")) {
-        level1Letter2.textContent = "D";
+
+    if (playHangman.includes(playWordlvl2)) {
+        let level1Letter6 = document.getElementById('L6');
+        if (playWordlvl2.charAt(0) === "d") {
+            level1Letter1.textContent = "D"; 
+        }
+        if (playWordlvl2.charAt(1) === "d") {
+            level1Letter2.textContent = "D"; 
+        }
+        if (playWordlvl2.charAt(2) === "d") {
+            level1Letter3.textContent = "D"; 
+        }
+        if (playWordlvl2.charAt(3) === "d") {
+            level1Letter4.textContent = "D"; 
+        }
+        if (playWordlvl2.charAt(4) === "d") {
+            level1Letter5.textContent = "D"; 
+        }
+        if (playWordlvl2.charAt(5) === "d") {
+            level1Letter6.textContent = "D"; 
+        }
+        if (!playWordlvl2.includes("d")) {
+            guess.textContent = "Please try again!";
+            tryAgain++;
+        }
     }
-    if ((playWordlvl1[2] === "d") || (playWordlvl102[2] === "d")) {
-        level1Letter3.textContent = "D";
-    }
-    if ((playWordlvl1[3] === "d") || (playWordlvl102[3] === "d")) {
-        level1Letter4.textContent = "D";
-    }
-    if ((playWordlvl1[4] === "d") || (playWordlvl102[4] === "d")) {
-        level1Letter5.textContent = "D";
-    }
-    if ((!playWordlvl1.includes("d")) || (!playWordlvl102.includes("d"))) {
-        guess.textContent = "Please try again!";
-        tryAgain += 1;
-    }
+
     setTimeout(function() {guess.textContent = ""}, 3000);
-    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl102))) {
+    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl2))) {
         numberTries++;
     };
     tries.textContent = `# of Tries: ${6 - numberTries}`;
@@ -308,27 +446,56 @@ function actived() {
 
 function activee() {
     e.style.textDecoration = "line-through";
-    if ((playWordlvl1[0] === "e") || (playWordlvl102[0] === "e")) {
-        level1Letter1.textContent = "E";
+    if (playHangman.includes(playWordlvl1)) {
+        if (playWordlvl1.charAt(0) === "e") {
+            level1Letter1.textContent = "E"; 
+        }
+        if (playWordlvl1.charAt(1) === "e") {
+            level1Letter2.textContent = "E"; 
+        }
+        if (playWordlvl1.charAt(2) === "e") {
+            level1Letter3.textContent = "E"; 
+        }
+        if (playWordlvl1.charAt(3) === "e") {
+            level1Letter4.textContent = "E"; 
+        }
+        if (playWordlvl1.charAt(4) === "e") {
+            level1Letter5.textContent = "E"; 
+        }
+        if (!playWordlvl1.includes("e")) {
+            guess.textContent = "Please try again!";
+            tryAgain++;
+        }
     }
-    if ((playWordlvl1[1] === "e") || (playWordlvl102[1] === "e")) {
-        level1Letter2.textContent = "E";
+    
+    if (playHangman.includes(playWordlvl2)) {
+        let level1Letter6 = document.getElementById('L6');
+        if (playWordlvl2.charAt(0) === "e") {
+            level1Letter1.textContent = "E"; 
+        }
+        if (playWordlvl2.charAt(1) === "e") {
+            level1Letter2.textContent = "E"; 
+        }
+        if (playWordlvl2.charAt(2) === "e") {
+            level1Letter3.textContent = "E"; 
+        }
+        if (playWordlvl2.charAt(3) === "e") {
+            level1Letter4.textContent = "E"; 
+        }
+        if (playWordlvl2.charAt(4) === "e") {
+            level1Letter5.textContent = "E"; 
+        }
+        if (playWordlvl2.charAt(5) === "e") {
+            level1Letter6.textContent = "E"; 
+        }
+        if (!playWordlvl2.includes("e")) {
+            guess.textContent = "Please try again!";
+            tryAgain++;
+        }
     }
-    if ((playWordlvl1[2] === "e") || (playWordlvl102[2] === "e")) {
-        level1Letter3.textContent = "E";
-    }
-    if ((playWordlvl1[3] === "e") || (playWordlvl102[3] === "e")) {
-        level1Letter4.textContent = "E";
-    }
-    if ((playWordlvl1[4] === "e") || (playWordlvl102[4] === "e")) {
-        level1Letter5.textContent = "E";
-    }
-    if ((!playWordlvl1.includes("e")) || (!playWordlvl102.includes("e"))) {
-        guess.textContent = "Please try again!";
-        tryAgain += 1;
-    }
+
     setTimeout(function() {guess.textContent = ""}, 3000);
-    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl102))) {
+    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl2))) {
         numberTries++;
     };
     tries.textContent = `# of Tries: ${6 - numberTries}`;
@@ -338,29 +505,58 @@ function activee() {
 
 function activef() {
     f.style.textDecoration = "line-through";
-    if ((playWordlvl1[0] === "f") || (playWordlvl102[0] === "f")) {
-        level1Letter1.textContent = "F";
+    if (playHangman.includes(playWordlvl1)) {
+        if (playWordlvl1.charAt(0) === "f") {
+            level1Letter1.textContent = "F"; 
+        }
+        if (playWordlvl1.charAt(1) === "f") {
+            level1Letter2.textContent = "F"; 
+        }
+        if (playWordlvl1.charAt(2) === "f") {
+            level1Letter3.textContent = "F"; 
+        }
+        if (playWordlvl1.charAt(3) === "f") {
+            level1Letter4.textContent = "F"; 
+        }
+        if (playWordlvl1.charAt(4) === "f") {
+            level1Letter5.textContent = "F"; 
+        }
+        if (!playWordlvl1.includes("f")) {
+            guess.textContent = "Please try again!";
+            tryAgain++;
+        }
     }
-    if ((playWordlvl1[1] === "f") || (playWordlvl102[1] === "f")) {
-        level1Letter2.textContent = "F";
+
+    if (playHangman.includes(playWordlvl2)) {
+        let level1Letter6 = document.getElementById('L6');
+        if (playWordlvl2.charAt(0) === "f") {
+            level1Letter1.textContent = "F"; 
+        }
+        if (playWordlvl2.charAt(1) === "f") {
+            level1Letter2.textContent = "F"; 
+        }
+        if (playWordlvl2.charAt(2) === "f") {
+            level1Letter3.textContent = "F"; 
+        }
+        if (playWordlvl2.charAt(3) === "f") {
+            level1Letter4.textContent = "F"; 
+        }
+        if (playWordlvl2.charAt(4) === "f") {
+            level1Letter5.textContent = "F"; 
+        }
+        if (playWordlvl2.charAt(5) === "f") {
+            level1Letter6.textContent = "F"; 
+        }
+        if (!playWordlvl2.includes("f")) {
+            guess.textContent = "Please try again!";
+            tryAgain++;
+        } 
     }
-    if ((playWordlvl1[2] === "f") || (playWordlvl102[2] === "f")) {
-        level1Letter3.textContent = "F";
-    }
-    if ((playWordlvl1[3] === "f") || (playWordlvl102[3] === "f")) {
-        level1Letter4.textContent = "F";
-    }
-    if ((playWordlvl1[4] === "f") || (playWordlvl102[4] === "f")) {
-        level1Letter5.textContent = "F";
-    }
-    if ((!playWordlvl1.includes("f")) || (!playWordlvl102.includes("f"))) {
-        guess.textContent = "Please try again!";
-        tryAgain += 1;
-    }
+
     setTimeout(function() {guess.textContent = ""}, 3000);
-    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl102))) {
-        numberTries++;
-    };
+    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl2))) {
+        numberTries++;   
+    }
     tries.textContent = `# of Tries: ${6 - numberTries}`;
     displayHangman();
     winnerLoser();
@@ -368,29 +564,58 @@ function activef() {
 
 function activeg() {
     g.style.textDecoration = "line-through";
-    if ((playWordlvl1[0] === "g") || (playWordlvl102[0] === "g")) {
-        level1Letter1.textContent = "G";
+    if (playHangman.includes(playWordlvl1)) {
+        if (playWordlvl1.charAt(0) === "g") {
+            level1Letter1.textContent = "G"; 
+        }
+        if (playWordlvl1.charAt(1) === "g") {
+            level1Letter2.textContent = "G"; 
+        }
+        if (playWordlvl1.charAt(2) === "g") {
+            level1Letter3.textContent = "G"; 
+        }
+        if (playWordlvl1.charAt(3) === "g") {
+            level1Letter4.textContent = "G"; 
+        }
+        if (playWordlvl1.charAt(4) === "g") {
+            level1Letter5.textContent = "G"; 
+        }
+        if (!playWordlvl1.includes("g")) {
+            guess.textContent = "Please try again!";
+            tryAgain++;
+        }
     }
-    if ((playWordlvl1[1] === "g") || (playWordlvl102[1] === "g")) {
-        level1Letter2.textContent = "G";
+
+    if (playHangman.includes(playWordlvl2)) {
+        let level1Letter6 = document.getElementById('L6');
+        if (playWordlvl2.charAt(0) === "g") {
+            level1Letter1.textContent = "G"; 
+        }
+        if (playWordlvl2.charAt(1) === "g") {
+            level1Letter2.textContent = "G"; 
+        }
+        if (playWordlvl2.charAt(2) === "g") {
+            level1Letter3.textContent = "G"; 
+        }
+        if (playWordlvl2.charAt(3) === "g") {
+            level1Letter4.textContent = "G"; 
+        }
+        if (playWordlvl2.charAt(4) === "g") {
+            level1Letter5.textContent = "G"; 
+        }
+        if (playWordlvl2.charAt(5) === "g") {
+            level1Letter6.textContent = "G"; 
+        }
+        if (!playWordlvl2.includes("g")) {
+            guess.textContent = "Please try again!";
+            tryAgain++;
+        }
     }
-    if ((playWordlvl1[2] === "g") || (playWordlvl102[2] === "g")) {
-        level1Letter3.textContent = "G";
-    }
-    if ((playWordlvl1[3] === "g") || (playWordlvl102[3] === "g")) {
-        level1Letter4.textContent = "G";
-    }
-    if ((playWordlvl1[4] === "g") || (playWordlvl102[4] === "g")) {
-        level1Letter5.textContent = "G";
-    }
-    if ((!playWordlvl1.includes("g")) || (!playWordlvl102.includes("g"))) {
-        guess.textContent = "Please try again!";
-        tryAgain += 1;
-    }
+
     setTimeout(function() {guess.textContent = ""}, 3000);
-    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl102))) {
-        numberTries++;
-    };
+    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl2))) {
+        numberTries++;   
+    }
     tries.textContent = `# of Tries: ${6 - numberTries}`;
     displayHangman();
     winnerLoser();
@@ -398,29 +623,58 @@ function activeg() {
 
 function activeh() {
     h.style.textDecoration = "line-through";
-    if ((playWordlvl1[0] === "h") || (playWordlvl102[0] === "h")) {
-        level1Letter1.textContent = "H";
+    if (playHangman.includes(playWordlvl1)) {
+        if (playWordlvl1.charAt(0) === "h") {
+            level1Letter1.textContent = "H"; 
+        }
+        if (playWordlvl1.charAt(1) === "h") {
+            level1Letter2.textContent = "H"; 
+        }
+        if (playWordlvl1.charAt(2) === "h") {
+            level1Letter3.textContent = "H"; 
+        }
+        if (playWordlvl1.charAt(3) === "h") {
+            level1Letter4.textContent = "H"; 
+        }
+        if (playWordlvl1.charAt(4) === "h") {
+            level1Letter5.textContent = "H"; 
+        }
+        if (!playWordlvl1.includes("h")) {
+            guess.textContent = "Please try again!";
+            tryAgain++;
+        }
     }
-    if ((playWordlvl1[1] === "h") || (playWordlvl102[1] === "h")) {
-        level1Letter2.textContent = "H";
+    
+    if (playHangman.includes(playWordlvl2)) {
+        let level1Letter6 = document.getElementById('L6');
+        if (playWordlvl2.charAt(0) === "h") {
+            level1Letter1.textContent = "H"; 
+        }
+        if (playWordlvl2.charAt(1) === "h") {
+            level1Letter2.textContent = "H"; 
+        }
+        if (playWordlvl2.charAt(2) === "h") {
+            level1Letter3.textContent = "H"; 
+        }
+        if (playWordlvl2.charAt(3) === "h") {
+            level1Letter4.textContent = "H"; 
+        }
+        if (playWordlvl2.charAt(4) === "h") {
+            level1Letter5.textContent = "H"; 
+        }
+        if (playWordlvl2.charAt(5) === "h") {
+            level1Letter6.textContent = "H"; 
+        }
+        if (!playWordlvl2.includes("h")) {
+            guess.textContent = "Please try again!";
+            tryAgain++;
+        }
     }
-    if ((playWordlvl1[2] === "h") || (playWordlvl102[2] === "h")){
-        level1Letter3.textContent = "H";
-    }
-    if ((playWordlvl1[3] === "h") || (playWordlvl102[3] === "h")) {
-        level1Letter4.textContent = "H";
-    }
-    if ((playWordlvl1[4] === "h") || (playWordlvl102[4] === "h")) {
-        level1Letter5.textContent = "H";
-    }
-    if ((!playWordlvl1.includes("h")) || (!playWordlvl102.includes("h"))) {
-        guess.textContent = "Please try again!";
-        tryAgain += 1;
-    }
+
     setTimeout(function() {guess.textContent = ""}, 3000);
-    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl102))) {
-        numberTries++;
-    };
+    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl2))) {
+        numberTries++;    
+    }
     tries.textContent = `# of Tries: ${6 - numberTries}`;
     displayHangman();
     winnerLoser();
@@ -428,29 +682,58 @@ function activeh() {
 
 function activei() {
     i.style.textDecoration = "line-through";
-    if ((playWordlvl1[0] === "i") || (playWordlvl102[0] === "i")) {
-        level1Letter1.textContent = "I";
+    if (playHangman.includes(playWordlvl1)) {
+        if (playWordlvl1.charAt(0) === "i") {
+            level1Letter1.textContent = "I"; 
+        }
+        if (playWordlvl1.charAt(1) === "i") {
+            level1Letter2.textContent = "I"; 
+        }
+        if (playWordlvl1.charAt(2) === "i") {
+            level1Letter3.textContent = "I"; 
+        }
+        if (playWordlvl1.charAt(3) === "i") {
+            level1Letter4.textContent = "I"; 
+        }
+        if (playWordlvl1.charAt(4) === "i") {
+            level1Letter5.textContent = "I"; 
+        }
+        if (!playWordlvl1.includes("i")) {
+            guess.textContent = "Please try again!";  
+            tryAgain++;
+        }
     }
-    if ((playWordlvl1[1] === "i") || (playWordlvl102[1] === "i")) {
-        level1Letter2.textContent = "I";
+
+    if (playHangman.includes(playWordlvl2)) {
+        let level1Letter6 = document.getElementById('L6');
+        if (playWordlvl2.charAt(0) === "i") {
+            level1Letter2.textContent = "I"; 
+        }
+        if (playWordlvl2.charAt(1) === "i") {
+            level1Letter2.textContent = "I"; 
+        }
+        if (playWordlvl2.charAt(2) === "i") {
+            level1Letter3.textContent = "I"; 
+        }
+        if (playWordlvl2.charAt(3) === "i") {
+            level1Letter4.textContent = "I"; 
+        }
+        if (playWordlvl2.charAt(4) === "i") {
+            level1Letter5.textContent = "I"; 
+        }
+        if (playWordlvl2.charAt(5) === "i") {
+            level1Letter6.textContent = "I"; 
+        }
+        if (!playWordlvl2.includes("i")) {
+            guess.textContent = "Please try again!";  
+            tryAgain++;
+        }
     }
-    if ((playWordlvl1[2] === "i") || (playWordlvl102[2] === "i")) {
-        level1Letter3.textContent = "I";
-    }
-    if ((playWordlvl1[3] === "i") || (playWordlvl102[3] === "i")) {
-        level1Letter4.textContent = "I";
-    }
-    if ((playWordlvl1[4] === "i") || (playWordlvl102[4] === "i")) {
-        level1Letter5.textContent = "I";
-    }
-    if ((!playWordlvl1.includes("i")) || (!playWordlvl102.includes("i"))) {
-        guess.textContent = "Please try again!";
-        tryAgain += 1;
-    }
+
     setTimeout(function() {guess.textContent = ""}, 3000);
-    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl102))) {
-        numberTries++;
-    };
+    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl2))) {
+        numberTries++;   
+    }
     tries.textContent = `# of Tries: ${6 - numberTries}`;
     displayHangman();
     winnerLoser();
@@ -458,27 +741,56 @@ function activei() {
 
 function activej() {
     j.style.textDecoration = "line-through";
-    if ((playWordlvl1[0] === "j") || (playWordlvl102[0] === "j")) {
-        level1Letter1.textContent = "J";
+    if (playHangman.includes(playWordlvl1)) {
+        if (playWordlvl1.charAt(0) === "j") {
+            level1Letter1.textContent = "J"; 
+        }
+        if (playWordlvl1.charAt(1) === "j") {
+            level1Letter2.textContent = "J"; 
+        }
+        if (playWordlvl1.charAt(2) === "j") {
+            level1Letter3.textContent = "J"; 
+        }
+        if (playWordlvl1.charAt(3) === "j") {
+            level1Letter4.textContent = "J"; 
+        }
+        if (playWordlvl1.charAt(4) === "j") {
+            level1Letter5.textContent = "J"; 
+        }
+        if (!playWordlvl1.includes("j")) {
+            guess.textContent = "Please try again!";
+            tryAgain ++;
+        }
     }
-    if ((playWordlvl1[1] === "j") || (playWordlvl102[1] === "j")) {
-        level1Letter2.textContent = "J";
+
+    if (playHangman.includes(playWordlvl2)) {
+        let level1Letter6 = document.getElementById('L6');
+        if (playWordlvl2.charAt(0) === "j") {
+            level1Letter1.textContent = "J"; 
+        }
+        if (playWordlvl2.charAt(1) === "j") {
+            level1Letter2.textContent = "J"; 
+        }
+        if (playWordlvl2.charAt(2) === "j") {
+            level1Letter3.textContent = "J"; 
+        }
+        if (playWordlvl2.charAt(3) === "j") {
+            level1Letter4.textContent = "J"; 
+        }
+        if (playWordlvl2.charAt(4) === "j") {
+            level1Letter5.textContent = "J"; 
+        }
+        if (playWordlvl2.charAt(5) === "j") {
+            level1Letter6.textContent = "J"; 
+        }
+        if (!playWordlvl2.includes("j")) {
+            guess.textContent = "Please try again!";
+            tryAgain ++;
+        }
     }
-    if ((playWordlvl1[2] === "j") || (playWordlvl102[2] === "j")) {
-        level1Letter3.textContent = "J";
-    }
-    if ((playWordlvl1[3] === "j") || (playWordlvl102[3] === "j")) {
-        level1Letter4.textContent = "J";
-    }
-    if ((playWordlvl1[4] === "j") || (playWordlvl102[4] === "j")) {
-        level1Letter5.textContent = "J";
-    }
-    if ((!playWordlvl1.includes("j")) || (!playWordlvl102.includes("j"))) {
-        guess.textContent = "Please try again!";
-        tryAgain += 1;
-    }
+
     setTimeout(function() {guess.textContent = ""}, 3000);
-    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl102))) {
+    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl2))) {
         numberTries++;
     };
     tries.textContent = `# of Tries: ${6 - numberTries}`;
@@ -488,27 +800,56 @@ function activej() {
 
 function activek() {
     k.style.textDecoration = "line-through";
-    if ((playWordlvl1[0] === "k") || (playWordlvl102[0] === "k")) {
-        level1Letter1.textContent = "K";
+    if (playHangman.includes(playWordlvl1)) {
+        if (playWordlvl1.charAt(0) === "k") {
+            level1Letter1.textContent = "K"; 
+        }
+        if (playWordlvl1.charAt(1) === "k") {
+            level1Letter2.textContent = "K"; 
+        }
+        if (playWordlvl1.charAt(2) === "k") {
+            level1Letter3.textContent = "K"; 
+        }
+        if (playWordlvl1.charAt(3) === "k") {
+            level1Letter4.textContent = "K"; 
+        }
+        if (playWordlvl1.charAt(4) === "k") {
+            level1Letter5.textContent = "K"; 
+        }
+        if (!playWordlvl1.includes("k")) {
+            guess.textContent = "Please try again!";
+            tryAgain ++;
+        }
     }
-    if ((playWordlvl1[1] === "k") || (playWordlvl102[1] === "k")) {
-        level1Letter2.textContent = "K";
+
+    if (playHangman.includes(playWordlvl2)) {
+        let level1Letter6 = document.getElementById('L6');
+        if (playWordlvl2.charAt(0) === "k") {
+            level1Letter1.textContent = "K"; 
+        }
+        if (playWordlvl2.charAt(1) === "k") {
+            level1Letter2.textContent = "K"; 
+        }
+        if (playWordlvl2.charAt(2) === "k") {
+            level1Letter3.textContent = "K"; 
+        }
+        if (playWordlvl2.charAt(3) === "k") {
+            level1Letter4.textContent = "K"; 
+        }
+        if (playWordlvl2.charAt(4) === "k") {
+            level1Letter5.textContent = "K"; 
+        }
+        if (playWordlvl2.charAt(5) === "k") {
+            level1Letter6.textContent = "K"; 
+        }
+        if (!playWordlvl2.includes("k")) {
+            guess.textContent = "Please try again!";
+            tryAgain ++;
+        }
     }
-    if ((playWordlvl1[2] === "k") || (playWordlvl102[2] === "k")) {
-        level1Letter3.textContent = "K";
-    }
-    if ((playWordlvl1[3] === "k") || (playWordlvl102[3] === "k")) {
-        level1Letter4.textContent = "K";
-    }
-    if ((playWordlvl1[4] === "k") || (playWordlvl102[4] === "k")) {
-        level1Letter5.textContent = "K";
-    }
-    if ((!playWordlvl1.includes("k")) || (!playWordlvl102.includes("k"))) {
-        guess.textContent = "Please try again!";
-        tryAgain += 1;
-    }
+
     setTimeout(function() {guess.textContent = ""}, 3000);
-    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl102))) {
+    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl2))) {
         numberTries++;
     };
     tries.textContent = `# of Tries: ${6 - numberTries}`;
@@ -518,27 +859,56 @@ function activek() {
 
 function activel() {
     l.style.textDecoration = "line-through";
-    if ((playWordlvl1[0] === "l") || (playWordlvl102[0] === "l")) {
-        level1Letter1.textContent = "L";
+    if (playHangman.includes(playWordlvl1)) {
+        if (playWordlvl1.charAt(0) === "l") {
+            level1Letter1.textContent = "L"; 
+        }
+        if (playWordlvl1.charAt(1) === "l") {
+            level1Letter2.textContent = "L"; 
+        }
+        if (playWordlvl1.charAt(2) === "l") {
+            level1Letter3.textContent = "L"; 
+        }
+        if (playWordlvl1.charAt(3) === "l") {
+            level1Letter4.textContent = "L"; 
+        }
+        if (playWordlvl1.charAt(4) === "l") {
+            level1Letter5.textContent = "L"; 
+        }
+        if (!playWordlvl1.includes("l")) {
+            guess.textContent = "Please try again!";
+            tryAgain ++;
+        }
     }
-    if ((playWordlvl1[1] === "l") || (playWordlvl102[1] === "l")) {
-        level1Letter2.textContent = "L";
+    
+    if (playHangman.includes(playWordlvl2)) {
+        let level1Letter6 = document.getElementById('L6');
+        if (playWordlvl2.charAt(0) === "l") {
+            level1Letter1.textContent = "L"; 
+        }
+        if (playWordlvl2.charAt(1) === "l") {
+            level1Letter2.textContent = "L"; 
+        }
+        if (playWordlvl2.charAt(2) === "l") {
+            level1Letter3.textContent = "L"; 
+        }
+        if (playWordlvl2.charAt(3) === "l") {
+            level1Letter4.textContent = "L"; 
+        }
+        if (playWordlvl2.charAt(4) === "l") {
+            level1Letter5.textContent = "L"; 
+        }
+        if (playWordlvl2.charAt(5) === "l") {
+            level1Letter6.textContent = "L"; 
+        }
+        if (!playWordlvl2.includes("l")) {
+            guess.textContent = "Please try again!";
+            tryAgain++;
+        }
     }
-    if ((playWordlvl1[2] === "l") || (playWordlvl102[2] === "l")) {
-        level1Letter3.textContent = "L";
-    }
-    if ((playWordlvl1[3] === "l") || (playWordlvl102[3] === "l")) {
-        level1Letter4.textContent = "L";
-    }
-    if ((playWordlvl1[4] === "l") || (playWordlvl102[4] === "l")) {
-        level1Letter5.textContent = "L";
-    }
-    if ((!playWordlvl1.includes("l")) || (!playWordlvl102.includes("l"))) {
-        guess.textContent = "Please try again!";
-        tryAgain += 1;
-    }
+
     setTimeout(function() {guess.textContent = ""}, 3000);
-    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl102))) {
+    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl2))) {
         numberTries++;
     };
     tries.textContent = `# of Tries: ${6 - numberTries}`;
@@ -548,27 +918,56 @@ function activel() {
 
 function activem() {
     m.style.textDecoration = "line-through";
-    if ((playWordlvl1[0] === "m") || (playWordlvl102[0] === "m")) {
-        level1Letter1.textContent = "M";
+    if (playHangman.includes(playWordlvl1)) {
+        if (playWordlvl1.charAt(0) === "m") {
+            level1Letter1.textContent = "M"; 
+        }
+        if (playWordlvl1.charAt(1) === "m") {
+            level1Letter2.textContent = "M"; 
+        }
+        if (playWordlvl1.charAt(2) === "m") {
+            level1Letter3.textContent = "M"; 
+        }
+        if (playWordlvl1.charAt(3) === "m") {
+            level1Letter4.textContent = "M"; 
+        }
+        if (playWordlvl1.charAt(4) === "m") {
+            level1Letter5.textContent = "M"; 
+        }
+        if (!playWordlvl1.includes("m")) {
+            guess.textContent = "Please try again!";
+            tryAgain ++;
+        }
     }
-    if ((playWordlvl1[1] === "m") || (playWordlvl102[1] === "m")) {
-        level1Letter2.textContent = "M";
+
+    if (playHangman.includes(playWordlvl2)) {
+        let level1Letter6 = document.getElementById('L6');
+        if (playWordlvl2.charAt(0) === "m") {
+            level1Letter1.textContent = "M"; 
+        }
+        if (playWordlvl2.charAt(1) === "m") {
+            level1Letter2.textContent = "M"; 
+        }
+        if (playWordlvl2.charAt(2) === "m") {
+            level1Letter3.textContent = "M"; 
+        }
+        if (playWordlvl2.charAt(3) === "m") {
+            level1Letter4.textContent = "M"; 
+        }
+        if (playWordlvl2.charAt(4) === "m") {
+            level1Letter5.textContent = "M"; 
+        }
+        if (playWordlvl2.charAt(5) === "m") {
+            level1Letter6.textContent = "M"; 
+        }
+        if (!playWordlvl2.includes("m")) {
+            guess.textContent = "Please try again!";
+            tryAgain ++;
+        }
     }
-    if ((playWordlvl1[2] === "m") || (playWordlvl102[2] === "m")) {
-        level1Letter3.textContent = "M";
-    }
-    if ((playWordlvl1[3] === "m") || (playWordlvl102[3] === "m")) {
-        level1Letter4.textContent = "M";
-    }
-    if ((playWordlvl1[4] === "m") || (playWordlvl102[4] === "m")) {
-        level1Letter5.textContent = "M";
-    }
-    if ((!playWordlvl1.includes("m")) || (!playWordlvl102.includes("m"))) {
-        guess.textContent = "Please try again!";
-        tryAgain += 1;
-    }
+
     setTimeout(function() {guess.textContent = ""}, 3000);
-    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl102))) {
+    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl2))) {
         numberTries++;
     };
     tries.textContent = `# of Tries: ${6 - numberTries}`;
@@ -578,27 +977,56 @@ function activem() {
 
 function activen() {
     n.style.textDecoration = "line-through";
-    if ((playWordlvl1[0] === "n") || (playWordlvl102[0] === "n")) {
-        level1Letter1.textContent = "N";
+    if (playHangman.includes(playWordlvl1)) {
+        if (playWordlvl1.charAt(0) === "n") {
+            level1Letter1.textContent = "N"; 
+        }
+        if (playWordlvl1.charAt(1) === "n") {
+            level1Letter2.textContent = "N"; 
+        }
+        if (playWordlvl1.charAt(2) === "n") {
+            level1Letter3.textContent = "N"; 
+        }
+        if (playWordlvl1.charAt(3) === "n") {
+            level1Letter4.textContent = "N"; 
+        }
+        if (playWordlvl1.charAt(4) === "n") {
+            level1Letter5.textContent = "N"; 
+        }
+        if (!playWordlvl1.includes("n")) {
+            guess.textContent = "Please try again!";
+            tryAgain ++;
+        }
     }
-    if ((playWordlvl1[1] === "n") || (playWordlvl102[1] === "n")) {
-        level1Letter2.textContent = "N";
+
+    if (playHangman.includes(playWordlvl2)) {
+        let level1Letter6 = document.getElementById('L6');
+        if (playWordlvl2.charAt(0) === "n") {
+            level1Letter1.textContent = "N"; 
+        }
+        if (playWordlvl2.charAt(1) === "n") {
+            level1Letter2.textContent = "N"; 
+        }
+        if (playWordlvl2.charAt(2) === "n") {
+            level1Letter3.textContent = "N"; 
+        }
+        if (playWordlvl2.charAt(3) === "n") {
+            level1Letter4.textContent = "N"; 
+        }
+        if (playWordlvl2.charAt(4) === "n") {
+            level1Letter5.textContent = "N"; 
+        }
+        if (playWordlvl2.charAt(5) === "n") {
+            level1Letter6.textContent = "N"; 
+        }
+        if (!playWordlvl2.includes("n")) {
+            guess.textContent = "Please try again!";
+            tryAgain ++;
+        }
     }
-    if ((playWordlvl1[2] === "n") || (playWordlvl102[2] === "n")) {
-        level1Letter3.textContent = "N";
-    }
-    if ((playWordlvl1[3] === "n") || (playWordlvl102[3] === "n")) {
-        level1Letter4.textContent = "N";
-    }
-    if ((playWordlvl1[4] === "n") || (playWordlvl102[4] === "n")) {
-        level1Letter5.textContent = "N";
-    }
-    if ((!playWordlvl1.includes("n")) || (!playWordlvl1.includes("n"))) {
-        guess.textContent = "Please try again!";
-        tryAgain += 1;
-    }
+
     setTimeout(function() {guess.textContent = ""}, 3000);
-    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl102))) {
+    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl2))) {
         numberTries++;
     };
     tries.textContent = `# of Tries: ${6 - numberTries}`;
@@ -609,27 +1037,56 @@ function activen() {
 
 function activeo() {
     o.style.textDecoration = "line-through";
-    if ((playWordlvl1[0] === "o") || (playWordlvl102[0] === "o")) {
-        level1Letter1.textContent = "O";
+    if (playHangman.includes(playWordlvl1)) {
+        if (playWordlvl1.charAt(0) === "o") {
+            level1Letter1.textContent = "O"; 
+        }
+        if (playWordlvl1.charAt(1) === "o") {
+            level1Letter2.textContent = "O"; 
+        }
+        if (playWordlvl1.charAt(2) === "o") {
+            level1Letter3.textContent = "O"; 
+        }
+        if (playWordlvl1.charAt(3) === "o") {
+            level1Letter4.textContent = "O"; 
+        }
+        if (playWordlvl1.charAt(4) === "o") {
+            level1Letter5.textContent = "O"; 
+        }
+        if (!playWordlvl1.includes("o")) {
+            guess.textContent = "Please try again!";
+            tryAgain ++;
+        }
     }
-    if ((playWordlvl1[1] === "o") || (playWordlvl102[1] === "o")) {
-        level1Letter2.textContent = "O";
+
+    if (playHangman.includes(playWordlvl2)) {
+        let level1Letter6 = document.getElementById('L6');
+        if (playWordlvl2.charAt(0) === "o") {
+            level1Letter1.textContent = "O"; 
+        }
+        if (playWordlvl2.charAt(1) === "o") {
+            level1Letter2.textContent = "O"; 
+        }
+        if (playWordlvl2.charAt(2) === "o") {
+            level1Letter3.textContent = "O"; 
+        }
+        if (playWordlvl2.charAt(3) === "o") {
+            level1Letter4.textContent = "O"; 
+        }
+        if (playWordlvl2.charAt(4) === "o") {
+            level1Letter5.textContent = "O"; 
+        }
+        if (playWordlvl2.charAt(5) === "o") {
+            level1Letter6.textContent = "O"; 
+        }
+        if (!playWordlvl2.includes("o")) {
+            guess.textContent = "Please try again!";
+            tryAgain++;
+        }
     }
-    if ((playWordlvl1[2] === "o") || (playWordlvl102[2] === "o")) {
-        level1Letter3.textContent = "O";
-    }
-    if ((playWordlvl1[3] === "o") || (playWordlvl102[3] === "o")) {
-        level1Letter4.textContent = "O";
-    }
-    if ((playWordlvl1[4] === "o") || (playWordlvl102[4] === "o")) {
-        level1Letter5.textContent = "O";
-    }
-    if ((!playWordlvl1.includes("o")) || (!playWordlvl102.includes("o"))) {
-        guess.textContent = "Please try again!";
-        tryAgain += 1;
-    }
+
     setTimeout(function() {guess.textContent = ""}, 3000);
-    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl102))) {
+    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl2))) {
         numberTries++;
     };
     tries.textContent = `# of Tries: ${6 - numberTries}`;
@@ -639,27 +1096,56 @@ function activeo() {
 
 function activep() {
     p.style.textDecoration = "line-through";
-    if ((playWordlvl1[0] === "p") || (playWordlvl102[0] === "p")) {
-        level1Letter1.textContent = "P";
+    if (playHangman.includes(playWordlvl1)) {
+        if (playWordlvl1.charAt(0) === "p") {
+            level1Letter1.textContent = "P"; 
+        }
+        if (playWordlvl1.charAt(1) === "p") {
+            level1Letter2.textContent = "P"; 
+        }
+        if (playWordlvl1.charAt(2) === "p") {
+            level1Letter3.textContent = "P"; 
+        }
+        if (playWordlvl1.charAt(3) === "p") {
+            level1Letter4.textContent = "P"; 
+        }
+        if (playWordlvl1.charAt(4) === "p") {
+            level1Letter5.textContent = "P"; 
+        }
+        if (!playWordlvl1.includes("p")) {
+            guess.textContent = "Please try again!";
+            tryAgain ++;
+        }
     }
-    if ((playWordlvl1[1] === "p") || (playWordlvl102[1] === "p")) {
-        level1Letter2.textContent = "P";
+
+    if (playHangman.includes(playWordlvl2)) {
+        let level1Letter6 = document.getElementById('L6');
+        if (playWordlvl2.charAt(0) === "p") {
+            level1Letter1.textContent = "P"; 
+        }
+        if (playWordlvl2.charAt(1) === "p") {
+            level1Letter2.textContent = "P"; 
+        }
+        if (playWordlvl2.charAt(2) === "p") {
+            level1Letter3.textContent = "P"; 
+        }
+        if (playWordlvl2.charAt(3) === "p") {
+            level1Letter4.textContent = "P"; 
+        }
+        if (playWordlvl2.charAt(4) === "p") {
+            level1Letter5.textContent = "P"; 
+        }
+        if (playWordlvl2.charAt(5) === "p") {
+            level1Letter6.textContent = "P"; 
+        }
+        if (!playWordlvl2.includes("p")) {
+            guess.textContent = "Please try again!";
+            tryAgain ++;
+        }
     }
-    if ((playWordlvl1[2] === "p") || (playWordlvl102[2] === "p")) {
-        level1Letter3.textContent = "P";
-    }
-    if ((playWordlvl1[3] === "p") || (playWordlvl102[3] === "p")) {
-        level1Letter4.textContent = "P";
-    }
-    if ((playWordlvl1[4] === "p") || (playWordlvl102[4] === "p")) {
-        level1Letter5.textContent = "P";
-    }
-    if ((!playWordlvl1.includes("p")) || (!playWordlvl102.includes("p"))) {
-        guess.textContent = "Please try again!";
-        tryAgain += 1;
-    }
+
     setTimeout(function() {guess.textContent = ""}, 3000);
-    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl102))) {
+    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl2))) {
         numberTries++;
      };
     tries.textContent = `# of Tries: ${6 - numberTries}`;
@@ -669,27 +1155,56 @@ function activep() {
 
 function activeq() {
     q.style.textDecoration = "line-through";
-    if ((playWordlvl1[0] === "q") || (playWordlvl102[0] === "q")) {
-        level1Letter1.textContent = "Q";
+    if (playHangman.includes(playWordlvl1)) {
+        if (playWordlvl1.charAt(0) === "q") {
+            level1Letter1.textContent = "Q"; 
+        }
+        if (playWordlvl1.charAt(1) === "q") {
+            level1Letter2.textContent = "Q"; 
+        }
+        if (playWordlvl1.charAt(2) === "q") {
+            level1Letter3.textContent = "Q"; 
+        }
+        if (playWordlvl1.charAt(3) === "q") {
+            level1Letter4.textContent = "Q"; 
+        }
+        if (playWordlvl1.charAt(4) === "q") {
+            level1Letter5.textContent = "Q"; 
+        }
+        if (!playWordlvl1.includes("q")) {
+            guess.textContent = "Please try again!";
+            tryAgain ++;
+        }
     }
-    if ((playWordlvl1[1] === "q") || (playWordlvl102[1] === "q")) {
-        level1Letter2.textContent = "Q";
+    
+    if (playHangman.includes(playWordlvl2)) {
+        let level1Letter6 = document.getElementById('L6');
+        if (playWordlvl2.charAt(0) === "q") {
+            level1Letter1.textContent = "Q"; 
+        }
+        if (playWordlvl2.charAt(1) === "q") {
+            level1Letter2.textContent = "Q"; 
+        }
+        if (playWordlvl2.charAt(2) === "q") {
+            level1Letter3.textContent = "Q"; 
+        }
+        if (playWordlvl2.charAt(3) === "q") {
+            level1Letter4.textContent = "Q"; 
+        }
+        if (playWordlvl2.charAt(4) === "q") {
+            level1Letter5.textContent = "Q"; 
+        }
+        if (playWordlvl2.charAt(5) === "q") {
+            level1Letter6.textContent = "Q"; 
+        }
+        if (!playWordlvl2.includes("q")) {
+            guess.textContent = "Please try again!";
+            tryAgain ++;
+        }
     }
-    if ((playWordlvl1[2] === "q") || (playWordlvl102[2] === "q")) {
-        level1Letter3.textContent = "Q";
-    }
-    if ((playWordlvl1[3] === "q") || (playWordlvl102[3] === "q")) {
-        level1Letter4.textContent = "Q";
-    }
-    if ((playWordlvl1[4] === "q") || (playWordlvl102[4] === "q")) {
-        level1Letter5.textContent = "Q";
-    }
-    if ((!playWordlvl1.includes("q")) || (!playWordlvl102.includes("q"))) {
-        guess.textContent = "Please try again!";
-        tryAgain += 1;
-    }
+
     setTimeout(function() {guess.textContent = ""}, 3000);
-    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl102))) {
+    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl2))) {
         numberTries++;
      };
     tries.textContent = `# of Tries: ${6 - numberTries}`;
@@ -699,27 +1214,56 @@ function activeq() {
 
 function activer() {
     r.style.textDecoration = "line-through";
-    if ((playWordlvl1[0] === "r") || (playWordlvl102[0] === "r")) {
-        level1Letter1.textContent = "R";
+    if (playHangman.includes(playWordlvl1)) {
+        if (playWordlvl1.charAt(0) === "r") {
+            level1Letter1.textContent = "R"; 
+        }
+        if (playWordlvl1.charAt(1) === "r") {
+            level1Letter2.textContent = "R"; 
+        }
+        if (playWordlvl1.charAt(2) === "r") {
+            level1Letter3.textContent = "R"; 
+        }
+        if (playWordlvl1.charAt(3) === "r") {
+            level1Letter4.textContent = "R"; 
+        }
+        if (playWordlvl1.charAt(4) === "r") {
+            level1Letter5.textContent = "R"; 
+        }
+        if (!playWordlvl1.includes("r")) {
+            guess.textContent = "Please try again!";
+            tryAgain ++;
+        }
     }
-    if ((playWordlvl1[1] === "r") || (playWordlvl102[1] === "r")) {
-        level1Letter2.textContent = "R";
+    
+    if (playHangman.includes(playWordlvl2)) {
+        let level1Letter6 = document.getElementById('L6');
+        if (playWordlvl2.charAt(0) === "r") {
+            level1Letter1.textContent = "R"; 
+        }
+        if (playWordlvl2.charAt(1) === "r") {
+            level1Letter2.textContent = "R"; 
+        }
+        if (playWordlvl2.charAt(2) === "r") {
+            level1Letter3.textContent = "R"; 
+        }
+        if (playWordlvl2.charAt(3) === "r") {
+            level1Letter4.textContent = "R"; 
+        }
+        if (playWordlvl2.charAt(4) === "r") {
+            level1Letter5.textContent = "R"; 
+        }
+        if (playWordlvl2.charAt(5) === "r") {
+            level1Letter6.textContent = "R"; 
+        }
+        if (!playWordlvl2.includes("r")) {
+            guess.textContent = "Please try again!";
+            tryAgain ++;
+        }
     }
-    if ((playWordlvl1[2] === "r") || (playWordlvl102[2] === "r")) {
-        level1Letter3.textContent = "R";
-    }
-    if ((playWordlvl1[3] === "r") || (playWordlvl102[3] === "r")) {
-        level1Letter4.textContent = "R";
-    }
-    if ((playWordlvl1[4] === "r") || (playWordlvl102[4] === "r")) {
-        level1Letter5.textContent = "R";
-    }
-    if ((!playWordlvl1.includes("r")) || (!playWordlvl102.includes("r"))) {
-        guess.textContent = "Please try again!";
-        tryAgain += 1;
-    }
+
     setTimeout(function() {guess.textContent = ""}, 3000);
-    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl102))) {
+    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl2))) {
         numberTries++;
      };
     tries.textContent = `# of Tries: ${6 - numberTries}`;
@@ -729,27 +1273,56 @@ function activer() {
 
 function actives() {
     s.style.textDecoration = "line-through";
-    if ((playWordlvl1[0] === "s") || (playWordlvl102[0] === "s")) {
-        level1Letter1.textContent = "S";
+    if (playHangman.includes(playWordlvl1)) {
+        if (playWordlvl1.charAt(0) === "s") {
+            level1Letter1.textContent = "S"; 
+        }
+        if (playWordlvl1.charAt(1) === "s") {
+            level1Letter2.textContent = "S"; 
+        }
+        if (playWordlvl1.charAt(2) === "s") {
+            level1Letter3.textContent = "S"; 
+        }
+        if (playWordlvl1.charAt(3) === "s") {
+            level1Letter4.textContent = "S"; 
+        }
+        if (playWordlvl1.charAt(4) === "s") {
+            level1Letter5.textContent = "S"; 
+        }
+        if (!playWordlvl1.includes("s")) {
+            guess.textContent = "Please try again!";
+            tryAgain ++;
+        }
     }
-    if ((playWordlvl1[1] === "s") || (playWordlvl102[1] === "s")) {
-        level1Letter2.textContent = "S";
+
+    if (playHangman.includes(playWordlvl2)) {
+        let level1Letter6 = document.getElementById('L6');
+        if (playWordlvl2.charAt(0) === "s") {
+            level1Letter1.textContent = "S"; 
+        }
+        if (playWordlvl2.charAt(1) === "s") {
+            level1Letter2.textContent = "S"; 
+        }
+        if (playWordlvl2.charAt(2) === "s") {
+            level1Letter3.textContent = "S"; 
+        }
+        if (playWordlvl2.charAt(3) === "s") {
+            level1Letter4.textContent = "S"; 
+        }
+        if (playWordlvl2.charAt(4) === "s") {
+            level1Letter5.textContent = "S"; 
+        }
+        if (playWordlvl2.charAt(5) === "s") {
+            level1Letter6.textContent = "S"; 
+        }
+        if (!playWordlvl2.includes("s")) {
+            guess.textContent = "Please try again!";
+            tryAgain ++;
+        }
     }
-    if ((playWordlvl1[2] === "s") || (playWordlvl102[2] === "s")) {
-        level1Letter3.textContent = "S";
-    }
-    if ((playWordlvl1[3] === "s") || (playWordlvl102[3] === "s")) {
-        level1Letter4.textContent = "S";
-    }
-    if ((playWordlvl1[4] === "s") || (playWordlvl102[4] === "s")) {
-        level1Letter5.textContent = "S";
-    }
-    if ((!playWordlvl1.includes("s")) || (!playWordlvl102.includes("s"))) {
-        guess.textContent = "Please try again!";
-        tryAgain += 1;
-    }
+
     setTimeout(function() {guess.textContent = ""}, 3000);
-    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl102))) {
+    if ((playHangman.includes(playWordlvl1)) && (playHangman.includes(playWordlvl2))) {
         numberTries++;
      };
     tries.textContent = `# of Tries: ${6 - numberTries}`;
@@ -759,27 +1332,56 @@ function actives() {
 
 function activet() {
     t.style.textDecoration = "line-through";
-    if ((playWordlvl1[0] === "t") || (playWordlvl102[0] === "t")) {
-        level1Letter1.textContent = "T";
+    if (playHangman.includes(playWordlvl1)) {
+        if (playWordlvl1.charAt(0) === "t") {
+            level1Letter1.textContent = "T"; 
+        }
+        if (playWordlvl1.charAt(1) === "t") {
+            level1Letter2.textContent = "T"; 
+        }
+        if (playWordlvl1.charAt(2) === "t") {
+            level1Letter3.textContent = "T"; 
+        }
+        if (playWordlvl1.charAt(3) === "t") {
+            level1Letter4.textContent = "T"; 
+        }
+        if (playWordlvl1.charAt(4) === "t") {
+            level1Letter5.textContent = "T"; 
+        }
+        if (!playWordlvl1.includes("t")) {
+            guess.textContent = "Please try again!";
+            tryAgain ++;
+        }
     }
-    if ((playWordlvl1[1] === "t") || (playWordlvl102[1] === "t")) {
-        level1Letter2.textContent = "T";
+    
+    if (playHangman.includes(playWordlvl2)) {
+        let level1Letter6 = document.getElementById('L6');
+        if (playWordlvl2.charAt(0) === "t") {
+            level1Letter1.textContent = "T"; 
+        }
+        if (playWordlvl2.charAt(1) === "t") {
+            level1Letter2.textContent = "T"; 
+        }
+        if (playWordlvl2.charAt(2) === "t") {
+            level1Letter3.textContent = "T"; 
+        }
+        if (playWordlvl2.charAt(3) === "t") {
+            level1Letter4.textContent = "T"; 
+        }
+        if (playWordlvl2.charAt(4) === "t") {
+            level1Letter5.textContent = "T"; 
+        }
+        if (playWordlvl2.charAt(5) === "t") {
+            level1Letter6.textContent = "T"; 
+        }
+        if (!playWordlvl2.includes("t")) {
+            guess.textContent = "Please try again!";
+            tryAgain ++;
+        }
     }
-    if ((playWordlvl1[2] === "t") || (playWordlvl102[2] === "t")) {
-        level1Letter3.textContent = "T";
-    }
-    if ((playWordlvl1[3] === "t") || (playWordlvl102[3] === "t")) {
-        level1Letter4.textContent = "T";
-    }
-    if ((playWordlvl1[4] === "t") || (playWordlvl102[4] === "t")) {
-        level1Letter5.textContent = "T";
-    }
-    if ((!playWordlvl1.includes("t")) || (!playWordlvl102.includes("t"))) {
-        guess.textContent = "Please try again!";
-        tryAgain += 1;
-    }
+
     setTimeout(function() {guess.textContent = ""}, 3000);
-    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl102))) {
+    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl2))) {
         numberTries++;
      };
     tries.textContent = `# of Tries: ${6 - numberTries}`;
@@ -789,29 +1391,58 @@ function activet() {
 
 function activeu() {
     u.style.textDecoration = "line-through";
-    if ((playWordlvl1[0] === "u") || (playWordlvl102[0] === "u")) {
-        level1Letter1.textContent = "U";
+    if (playHangman.includes(playWordlvl1)) {
+        if (playWordlvl1.charAt(0) === "u") {
+            level1Letter1.textContent = "U"; 
+        }
+        if (playWordlvl1.charAt(1) === "u") {
+            level1Letter2.textContent = "U"; 
+        }
+        if (playWordlvl1.charAt(2) === "u") {
+            level1Letter3.textContent = "U"; 
+        }
+        if (playWordlvl1.charAt(3) === "u") {
+            level1Letter4.textContent = "U"; 
+        }
+        if (playWordlvl1.charAt(4) === "u") {
+            level1Letter5.textContent = "U"; 
+        }
+        if (!playWordlvl1.includes("u")) {
+            guess.textContent = "Please try again!";
+            tryAgain ++;
+        }
     }
-    if ((playWordlvl1[1] === "u") || (playWordlvl102[1] === "u")) {
-        level1Letter2.textContent = "U";
+
+    if (playHangman.includes(playWordlvl2)) {
+        let level1Letter6 = document.getElementById('L6');
+        if (playWordlvl2.charAt(0) === "u") {
+            level1Letter1.textContent = "U"; 
+        }
+        if (playWordlvl2.charAt(1) === "u") {
+            level1Letter2.textContent = "U"; 
+        }
+        if (playWordlvl2.charAt(2) === "u") {
+            level1Letter3.textContent = "U"; 
+        }
+        if (playWordlvl2.charAt(3) === "u") {
+            level1Letter4.textContent = "U"; 
+        }
+        if (playWordlvl2.charAt(4) === "u") {
+            level1Letter5.textContent = "U"; 
+        }
+        if (playWordlvl2.charAt(5) === "u") {
+            level1Letter6.textContent = "U"; 
+        }
+        if (!playWordlvl2.includes("u")){
+            guess.textContent = "Please try again!";
+            tryAgain ++;
+        }
     }
-    if ((playWordlvl1[2] === "u") || (playWordlvl102[2] === "u")) {
-        level1Letter3.textContent = "U";
-    }
-    if ((playWordlvl1[3] === "u") || (playWordlvl102[3] === "u")) {
-        level1Letter4.textContent = "U";
-    }
-    if ((playWordlvl1[4] === "u") || (playWordlvl102[4] === "u")) {
-        level1Letter5.textContent = "U";
-    }
-    if ((!playWordlvl1.includes("u")) || (!playWordlvl102.includes("u"))) {
-        guess.textContent = "Please try again!";
-        tryAgain += 1;
-    }
+
     setTimeout(function() {guess.textContent = ""}, 3000);
-    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl102))) {
+    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl2))) {
         numberTries++;
-     };
+    };
     tries.textContent = `# of Tries: ${6 - numberTries}`;
     displayHangman();
     winnerLoser();
@@ -819,27 +1450,56 @@ function activeu() {
 
 function activev() {
     v.style.textDecoration = "line-through";
-    if ((playWordlvl1[0] === "v") || (playWordlvl102[0] === "v")) {
-        level1Letter1.textContent = "V";
+    if (playHangman.includes(playWordlvl1)) {
+        if (playWordlvl1.charAt(0) === "v") {
+            level1Letter1.textContent = "V"; 
+        }
+        if (playWordlvl1.charAt(1) === "v") {
+            level1Letter2.textContent = "V"; 
+        }
+        if (playWordlvl1.charAt(2) === "v") {
+            level1Letter3.textContent = "V"; 
+        }
+        if (playWordlvl1.charAt(3) === "v") {
+            level1Letter4.textContent = "V"; 
+        }
+        if (playWordlvl1.charAt(4) === "v") {
+            level1Letter5.textContent = "V"; 
+        }
+        if (!playWordlvl1.includes("v")) {
+            guess.textContent = "Please try again!";
+            tryAgain ++;
+        }
     }
-    if ((playWordlvl1[1] === "v") || (playWordlvl102[1] === "v")) {
-        level1Letter2.textContent = "V";
+    
+    if (playHangman.includes(playWordlvl2)) {
+        let level1Letter6 = document.getElementById('L6');
+        if (playWordlvl2.charAt(0) === "v") {
+            level1Letter1.textContent = "V"; 
+        }
+        if (playWordlvl2.charAt(1) === "v") {
+            level1Letter2.textContent = "V"; 
+        }
+        if (playWordlvl2.charAt(2) === "v") {
+            level1Letter3.textContent = "V"; 
+        }
+        if (playWordlvl2.charAt(3) === "v") {
+            level1Letter4.textContent = "V"; 
+        }
+        if (playWordlvl2.charAt(4) === "v") {
+            level1Letter5.textContent = "V"; 
+        }
+        if (playWordlvl2.charAt(5) === "v") {
+            level1Letter6.textContent = "V"; 
+        }
+        if (!playWordlvl2.includes("v")) {
+            guess.textContent = "Please try again!";
+            tryAgain ++;
+        }
     }
-    if ((playWordlvl1[2] === "v") || (playWordlvl102[2] === "v")) {
-        level1Letter3.textContent = "V";
-    }
-    if ((playWordlvl1[3] === "v") || (playWordlvl102[3] === "v")) {
-        level1Letter4.textContent = "V";
-    }
-    if ((playWordlvl1[4] === "v") || (playWordlvl102[4] === "v")) {
-        level1Letter5.textContent = "V";
-    }
-    if ((!playWordlvl1.includes("v")) || (!playWordlvl102.includes("v"))) {
-        guess.textContent = "Please try again!";
-        tryAgain += 1;
-    }
+
     setTimeout(function() {guess.textContent = ""}, 3000);
-    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl102))) {
+    if ((playHangman.includes(playWordlvl1)) && (playHangman.includes(playWordlvl2))) {
         numberTries++;
      };
     tries.textContent = `# of Tries: ${6 - numberTries}`;
@@ -849,27 +1509,56 @@ function activev() {
 
 function activew() {
     w.style.textDecoration = "line-through";
-    if ((playWordlvl1[0] === "w") || (playWordlvl102[0] === "w")) {
-        level1Letter1.textContent = "W";
+    if (playHangman.includes(playWordlvl1)) {
+        if (playWordlvl1.charAt(0) === "w") {
+            level1Letter1.textContent = "W"; 
+        }
+        if (playWordlvl1.charAt(1) === "w") {
+            level1Letter2.textContent = "W"; 
+        }
+        if (playWordlvl1.charAt(2) === "w") {
+            level1Letter3.textContent = "W"; 
+        }
+        if (playWordlvl1.charAt(3) === "w") {
+            level1Letter4.textContent = "W"; 
+        }
+        if (playWordlvl1.charAt(4) === "w") {
+            level1Letter5.textContent = "W"; 
+        }
+        if (!playWordlvl1.includes("w")) {
+            guess.textContent = "Please try again!";
+            tryAgain ++;
+        }
     }
-    if ((playWordlvl1[1] === "w") || (playWordlvl102[1] === "w")) {
-        level1Letter2.textContent = "W";
+    
+    if (playHangman.includes(playWordlvl2)) {
+        let level1Letter6 = document.getElementById('L6');
+        if (playWordlvl2.charAt(0) === "w") {
+            level1Letter1.textContent = "W"; 
+        }
+        if (playWordlvl2.charAt(1) === "w") {
+            level1Letter2.textContent = "W"; 
+        }
+        if (playWordlvl2.charAt(2) === "w") {
+            level1Letter3.textContent = "W"; 
+        }
+        if (playWordlvl2.charAt(3) === "w") {
+            level1Letter4.textContent = "W"; 
+        }
+        if (playWordlvl2.charAt(4) === "w") {
+            level1Letter5.textContent = "W"; 
+        }
+        if (playWordlvl2.charAt(5) === "w") {
+            level1Letter6.textContent = "W"; 
+        }
+        if (!playWordlvl2.includes("w")) {
+            guess.textContent = "Please try again!";
+            tryAgain ++;
+        }
     }
-    if ((playWordlvl1[2] === "w") || (playWordlvl102[2] === "w")) {
-        level1Letter3.textContent = "W";
-    }
-    if ((playWordlvl1[3] === "w") || (playWordlvl102[3] === "w")) {
-        level1Letter4.textContent = "W";
-    }
-    if ((playWordlvl1[4] === "w") || (playWordlvl102[4] === "w")) {
-        level1Letter5.textContent = "W";
-    }
-    if ((!playWordlvl1.includes("w")) || (!playWordlvl102.includes("w"))) {
-        guess.textContent = "Please try again!";
-        tryAgain += 1;
-    }
+
     setTimeout(function() {guess.textContent = ""}, 3000);
-    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl102))) {
+    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl2))) {
         numberTries++;
      };
     tries.textContent = `# of Tries: ${6 - numberTries}`;
@@ -879,27 +1568,56 @@ function activew() {
 
 function activex() {
     x.style.textDecoration = "line-through";
-    if ((playWordlvl1[0] === "x") || (playWordlvl102[0] === "x")) {
-        level1Letter1.textContent = "X";
+    if (playHangman.includes(playWordlvl1)) {
+        if (playWordlvl1.charAt(0) === "x") {
+            level1Letter1.textContent = "X"; 
+        }
+        if (playWordlvl1.charAt(1) === "x") {
+            level1Letter2.textContent = "X"; 
+        }
+        if (playWordlvl1.charAt(2) === "x") {
+            level1Letter3.textContent = "X"; 
+        }
+        if (playWordlvl1.charAt(3) === "x") {
+            level1Letter4.textContent = "X"; 
+        }
+        if (playWordlvl1.charAt(4) === "x") {
+            level1Letter5.textContent = "X"; 
+        }
+        if (!playWordlvl1.includes("x")) {
+            guess.textContent = "Please try again!";
+            tryAgain ++;
+        }
     }
-    if ((playWordlvl1[1] === "x") || (playWordlvl102[1] === "x")) {
-        level1Letter2.textContent = "X";
+    
+    if (playHangman.includes(playWordlvl2)) {
+        let level1Letter6 = document.getElementById('L6');
+        if (playWordlvl2.charAt(0) === "x") {
+            level1Letter1.textContent = "X"; 
+        }
+        if (playWordlvl2.charAt(1) === "x") {
+            level1Letter2.textContent = "X"; 
+        }
+        if (playWordlvl2.charAt(2) === "x") {
+            level1Letter3.textContent = "X"; 
+        }
+        if (playWordlvl2.charAt(3) === "x") {
+            level1Letter4.textContent = "X"; 
+        }
+        if (playWordlvl2.charAt(4) === "x") {
+            level1Letter5.textContent = "X"; 
+        }
+        if (playWordlvl2.charAt(5) === "x") {
+            level1Letter6.textContent = "X"; 
+        }
+        if (!playWordlvl2.includes("x")) {
+            guess.textContent = "Please try again!";
+            tryAgain ++;
+        }
     }
-    if ((playWordlvl1[2] === "x") || (playWordlvl102[2] === "x")) {
-        level1Letter3.textContent = "X";
-    }
-    if ((playWordlvl1[3] === "x") || (playWordlvl102[3] === "x")) {
-        level1Letter4.textContent = "X";
-    }
-    if ((playWordlvl1[4] === "x") || (playWordlvl102[4] === "x")) {
-        level1Letter5.textContent = "X";
-    }
-    if ((!playWordlvl1.includes("x")) || (!playWordlvl102.includes("x"))) {
-        guess.textContent = "Please try again!";
-        tryAgain += 1;
-    }
+
     setTimeout(function () { guess.textContent = "" }, 3000);
-    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl102))) {
+    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl2))) {
         numberTries++;
      };
     tries.textContent = `# of Tries: ${6 - numberTries}`;
@@ -909,28 +1627,56 @@ function activex() {
 
 function activey() {
     y.style.textDecoration = "line-through";
-    if ((playWordlvl1[0] === "y") || (playWordlvl102[0] === "y")) {
-        level1Letter1.textContent = "Y";
+    if (playHangman.includes(playWordlvl1)) {
+        if (playWordlvl1.charAt(0) === "y") {
+            level1Letter1.textContent = "Y"; 
+        }
+        if (playWordlvl1.charAt(1) === "y") {
+            level1Letter2.textContent = "Y"; 
+        }
+        if (playWordlvl1.charAt(2) === "y") {
+            level1Letter3.textContent = "Y"; 
+        }
+        if (playWordlvl1.charAt(3) === "y") {
+            level1Letter4.textContent = "Y"; 
+        }
+        if (playWordlvl1.charAt(4) === "y") {
+            level1Letter5.textContent = "Y"; 
+        }
+        if (!playWordlvl1.includes("y")) {
+            guess.textContent = "Please try again!";
+            tryAgain ++;
+        }
     }
-    if ((playWordlvl1[1] === "y") || (playWordlvl102[1] === "y")) {
-        level1Letter2.textContent = "Y";
+    
+    if (playHangman.includes(playWordlvl2)) {
+        let level1Letter6 = document.getElementById('L6');
+        if (playWordlvl2.charAt(0) === "y") {
+            level1Letter1.textContent = "Y"; 
+        }
+        if (playWordlvl2.charAt(1) === "y") {
+            level1Letter2.textContent = "Y"; 
+        }
+        if (playWordlvl2.charAt(2) === "y") {
+            level1Letter3.textContent = "Y"; 
+        }
+        if (playWordlvl2.charAt(3) === "y") {
+            level1Letter4.textContent = "Y"; 
+        }
+        if (playWordlvl2.charAt(4) === "y") {
+            level1Letter5.textContent = "Y"; 
+        }
+        if (playWordlvl2.charAt(5) === "y") {
+            level1Letter6.textContent = "Y"; 
+        }
+        if (!playWordlvl2.includes("y")) {
+            guess.textContent = "Please try again!";
+            tryAgain ++;
+        }
     }
-    if ((playWordlvl1[2] === "y") || (playWordlvl102[2] === "y")) {
-        level1Letter3.textContent = "Y";
-    }
-    if ((playWordlvl1[3] === "y") || (playWordlvl102[3] === "y")) {
-        level1Letter4.textContent = "Y";
-    }
-    if ((playWordlvl1[4] === "y") || (playWordlvl102[4] === "y")) {
-        level1Letter5.textContent = "Y";
-    }
-    if ((!playWordlvl1.includes("y")) || (!playWordlvl102.includes("y"))) {
-        guess.textContent = "Please try again!";
-        tryAgain += 1;
 
-    }
     setTimeout(function() {guess.textContent = ""}, 3000);
-    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl102))) {
+    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl2))) {
         numberTries++;
      };
     tries.textContent = `# of Tries: ${6 - numberTries}`;
@@ -940,28 +1686,56 @@ function activey() {
 
 function activez() {
     z.style.textDecoration = "line-through";
-    if ((playWordlvl1[0] === "z") || (playWordlvl102[0] === "z")) {
-        level1Letter1.textContent = "Z";
+    if (playHangman.includes(playWordlvl1)) {
+        if (playWordlvl1.charAt(0) === "z") {
+            level1Letter1.textContent = "Z";
+        }
+        if (playWordlvl1.charAt(1) === "z") {
+            level1Letter2.textContent = "Z"; 
+        }
+        if (playWordlvl1.charAt(2) === "z") {
+            level1Letter3.textContent = "Z"; 
+        }
+        if (playWordlvl1.charAt(3) === "z") {
+            level1Letter4.textContent = "Z"; 
+        }
+        if (playWordlvl1.charAt(4) === "z") {
+            level1Letter5.textContent = "Z"; 
+        }    
+        if (!playWordlvl1.includes("z")) {
+            guess.textContent = "Please try again!";
+            tryAgain ++;
+        }
     }
-    if ((playWordlvl1[1] === "z") || (playWordlvl102[1] === "z")) {
-        level1Letter2.textContent = "Z";
+  
+    if (playHangman.includes(playWordlvl2)) {
+        let level1Letter6 = document.getElementById('L6');
+        if (playWordlvl2.charAt(0) === "z") {
+            level1Letter1.textContent = "Z"; 
+        }
+        if (playWordlvl2.charAt(1) === "z") {
+            level1Letter2.textContent = "Z"; 
+        }
+        if (playWordlvl2.charAt(2) === "z") {
+            level1Letter3.textContent = "Z"; 
+        }
+        if (playWordlvl2.charAt(3) === "z") {
+            level1Letter4.textContent = "Z"; 
+        }
+        if (playWordlvl2.charAt(4) === "z") {
+            level1Letter5.textContent = "Z"; 
+        }
+        if (playWordlvl2.charAt(5) === "z") {
+            level1Letter6.textContent = "Z"; 
+        }
+        if (!playWordlvl2.includes("z")) {
+            guess.textContent = "Please try again!";
+            tryAgain ++;
+        }
     }
-    if ((playWordlvl1[2] === "z") || (playWordlvl102[2] === "z")) {
-        level1Letter3.textContent = "Z";
-    }
-    if ((playWordlvl1[3] === "z") || (playWordlvl102[3] === "z")) {
-        level1Letter4.textContent = "Z";
-    }
-    if ((playWordlvl1[4] === "z") || (playWordlvl102[4] === "z")) {
-        level1Letter5.textContent = "Z";
-    }
-    if ((!playWordlvl1.includes("z")) || (!playWordlvl102.includes("z"))) {
-        guess.textContent = "Please try again!";
-        tryAgain += 1;
 
-    }
     setTimeout(function() {guess.textContent = ""}, 3000);
-    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl102))) {
+    if ((playHangman.includes(playWordlvl1)) || (playHangman.includes(playWordlvl2))) {
        numberTries++;
     };
     tries.textContent = `# of Tries: ${6 - numberTries}`;
@@ -970,38 +1744,42 @@ function activez() {
 }
 
 function displayHangman() {
-    switch (tryAgain) {
-        case 1: hangman.setAttribute('src', './images/hangmanhead.jpg');
-            break;
-        case 2: hangman.setAttribute('src', './images/hangmantorso.jpg');
-            break;
-        case 3: hangman.setAttribute('src', './images/hangmanLarm.jpg');
-            break;
-        case 4: hangman.setAttribute('src', './images/hangmanRarm.jpg');
-            break;
-        case 5: hangman.setAttribute('src', './images/hangmanLleg.jpg');
-            break;
-        case 6: hangman.setAttribute('src', './images/hangmanRleg.jpg');
-            break;
-        default : hangman.setAttribute('src', './images/hangmaninit.jpg');
-    };
+    if (tryAgain === 0) {
+        hangman.setAttribute('src', './images/hangmaninit.jpg');
+    }
+    if (tryAgain === 1) {
+        hangman.setAttribute('src', './images/hangmanhead.jpg');
+    } 
+    if (tryAgain === 2) {
+        hangman.setAttribute('src', './images/hangmantorso.jpg');
+    } 
+    if (tryAgain === 3) {
+        hangman.setAttribute('src', './images/hangmanLarm.jpg');
+    } 
+    if (tryAgain === 4) {
+        hangman.setAttribute('src', './images/hangmanRarm.jpg');
+    } 
+    if (tryAgain === 5) {
+        hangman.setAttribute('src', './images/hangmanLleg.jpg');
+    }
+    if (tryAgain === 6) {
+        hangman.setAttribute('src', './images/hangmanRleg.jpg');
+    }
  }
 
-
-
 function winnerLoser() {
-    let winningTimeslvl1 = 0;
-    if ((numberTries <= 6) && (level1Letter1.textContent === playWordlvl1[0].toUpperCase()) && (level1Letter2.textContent === playWordlvl1[1].toUpperCase()) && (level1Letter3.textContent === playWordlvl1[2].toUpperCase())
-        && (level1Letter4.textContent === playWordlvl1[3].toUpperCase()) && (level1Letter5.textContent === playWordlvl1[4].toUpperCase())) {
+    let level1Letter6 = document.getElementById('L6');
+    if ((numberTries <= 6) && ((level1Letter1.textContent === playWordlvl1[0].toUpperCase()) && (level1Letter2.textContent === playWordlvl1[1].toUpperCase()) && (level1Letter3.textContent === playWordlvl1[2].toUpperCase())
+        && (level1Letter4.textContent === playWordlvl1[3].toUpperCase()) && (level1Letter5.textContent === playWordlvl1[4].toUpperCase()))) {
         winner.textContent = "WINNER!!! YOU WIN HANGMAN!";
         moveAnnouncement();
-        winningTimeslvl1 += 1;
-        if ((playHangman.length === 1) && (winningTimeslvl1 === 1) ) {
-            next.addEventListener('click', chooseNextWordlvl102);
-            nextWord.textContent = "Press the Next Word button to play the next word";
-        } else {
-            chooseWordLevel2(playWordlvl2);
-        }
+        if (playHangman.includes(playWordlvl1)) {
+            const lvl2btn = document.createElement('button');
+            lvl2btn.innerHTML = 'Level 2';
+            resetSpan.appendChild(lvl2btn);
+            lvl2btn.addEventListener('click', chooseWordLevel2);
+            nextLevel.textContent = "Press the Level 2 button to play the next word";
+        }                       
     } else if ((numberTries === 6) && ((level1Letter1.textContent != playWordlvl1[0] || level1Letter2.textContent != playWordlvl1[1] || level1Letter3.textContent != playWordlvl1[2])
         || level1Letter4.textContent != playWordlvl1[3] || level1Letter5.textContent != playWordlvl1[4])) {
         winner.textContent = `SORRY, YOU ARE OUT OF GUESSES! YOU ARE HUNG!\n The correct answer was ${playWordlvl1}`;
@@ -1009,6 +1787,26 @@ function winnerLoser() {
         winner.style.fontWeight = 'bold';
         winner.style.fontSize = 'large';
     }
+
+
+    if ((numberTries <= 6) && ((level1Letter1.textContent === playWordlvl2[0].toUpperCase()) && (level1Letter2.textContent === playWordlvl2[1].toUpperCase()) && (level1Letter3.textContent === playWordlvl2[2].toUpperCase())
+        && (level1Letter4.textContent === playWordlvl2[3].toUpperCase()) && (level1Letter5.textContent === playWordlvl2[4].toUpperCase())) 
+        && (level1Letter6.textContent === pllayWordlvll2[5].toUpperCase())) {
+        winner.textContent = "WINNER!!! YOU WIN HANGMAN!";
+        moveAnnouncement();
+        if (playHangman.includes(playWordlvl2)) {
+            resetSpan.innerHTML = "";
+            const lvl3btn = document.createElement('button');
+            lvl3btn.innerHTML = 'Level 3';
+            resetSpan.appendChild(lvl3btn);
+        }  
+    } else if ((numberTries === 6) && ((level1Letter1.textContent != playWordlvl2[0] || level1Letter2.textContent != playWordlvl2[1] || level1Letter3.textContent != playWordlvl2[2])
+            || level1Letter4.textContent != playWordlvl2[3] || level1Letter5.textContent != playWordlvl2[4])) {
+            winner.textContent = `SORRY, YOU ARE OUT OF GUESSES! YOU ARE HUNG!\n The correct answer was ${playWordlvl2}`;
+            winner.style.color = "green";
+            winner.style.fontWeight = 'bold';
+            winner.style.fontSize = 'large';
+        }  
 }
 
 function moveAnnouncement() {
@@ -1032,10 +1830,7 @@ function moveAnnouncement() {
 // * Set up words for levels 
 // * Set up game to go to the next level and reset number of Tries counter had
 // * Dress up the look!
-// * Make sure that duplicate words are not selected for player 
-// * Trim down the boxes to match the number of letters in the word
 // * Change color of letter boxes when correct letter is chosen
-
 
 
 

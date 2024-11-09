@@ -1,15 +1,25 @@
-#level1 span {
-    border: 1px solid black;
-    padding: 20px;
+#level span {
+    border: 3px solid black;
+    padding: 30px;
     max-width: 50px;
-    margin: 5px;
+    margin: 30px;
 }
 
 div {
     margin-top: 30px;
 }
 
-#letters span {
+#lettersRow1 span {
+    padding: 10px;
+    border: 2px solid blue;
+    background-color: yellow;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#lettersRow2 span {
     padding: 10px;
     border: 2px solid blue;
     background-color: yellow;
