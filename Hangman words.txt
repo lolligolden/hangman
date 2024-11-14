@@ -25,7 +25,7 @@ const LEVEL1 = ["acorn", "after", "agile", "aisle",
                 "wagon", "waltz", "water", "weird", "wheat", "witch", "world", "worse", "wrath", 
                 "xylem",  
                 "yards", "yearn", "yeast", "yield", "yikes", "yodel", "yogis", "youth", 
-                "zebra", "zesty", "zingy", "zones
+                "zebra", "zesty", "zingy", "zones"];
 
 Level 2 - 6 letter words:
 
@@ -54,3 +54,7 @@ const LEVEL2 = ["abound", "action", "actual", "adjust", "adrift", "anchor",
                 "waiter", "walker", "wanted", "warmth", "watery", "weight", "widget", "wisdom", 
                 "yarrow", "yellow", "yogurt", "yonder", 
                 "zealot", "zodiac", "zombie"];
+
+Level 3 - 7 letter words:
+
+const LEVEL3 = [];

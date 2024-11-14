@@ -1,39 +1,110 @@
+body {
+    background-image: url(images/forest.jpg);
+}
+
 #level span {
     border: 3px solid black;
     padding: 30px;
-    max-width: 50px;
-    margin: 30px;
+    margin: 10px;
+    max-height: 100%;
+    /* font-size: 50px; */
 }
 
-div {
-    margin-top: 30px;
+#level {
+    display: flex;
+    justify-content: center;
+    /* padding: 10px; */
+    /* max-height: 10%; */
+    /* max-width: 5%; */
 }
+div {
+    margin-top: 5px;
+}
+
+#lettersRow1.chooseLetters {
+    display: flex;
+    justify-content: center;
+}
+
+#lettersRow2.chooseLetters {
+    display: flex;
+    justify-content: center;
+}
+
 
 #lettersRow1 span {
     padding: 10px;
-    border: 2px solid blue;
+    border: 2px solid green;
     background-color: yellow;
     font-weight: bold;
     border-radius: 10px;
+    margin-bottom: 15px;
     margin-left: 5px;
     margin-right: 5px;
 }
 
 #lettersRow2 span {
     padding: 10px;
-    border: 2px solid blue;
+    border: 2px solid green;
     background-color: yellow;
     font-weight: bold;
     border-radius: 10px;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-bottom: 15px;
+    margin-left: 3px;
+    margin-right: 3px;
 }
 
 h1 {
+    text-align: center;
     padding-bottom: 2px;
     margin-bottom: 2px;
+    margin-top: 5px;
+    font-size: 3em;
+    color: green;
+}
+
+h2 {
+    /* display: inline-flex; */
+    /* justify-content: center; */
+    font-size: 3em;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    /* margin-inline-start: 50px; */
+    /* margin-inline-end: 50px; */
 }
 
 img {
     padding-bottom: 0px;
+    height: 225px;
+    display: block;
+    justify-self: center;
+}
+
+#playLevel {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: x-large;
+    font-family: fantasy;
+    color: green;
+}
+
+.tries {
+    display: flex;
+    justify-content: center;
+    font-size:larger;
+    font-weight: bold;
+}
+
+#numberTries {
+    padding: 5px;
+}
+#buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+#play, #reset {
+    margin: 0px 5px 0px 5px;
 }
