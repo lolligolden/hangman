@@ -57,4 +57,15 @@ const LEVEL2 = ["abound", "action", "actual", "adjust", "adrift", "anchor",
 
 Level 3 - 7 letter words:
 
-const LEVEL3 = [];
+const LEVEL3 = ["abdomen", "abolish", "acquire", "acronym", "advisor",
+		"backlog", "balcony", "banquet", "baptism", "bedrock",
+		"cabinet", "caliper", "calorie", "central", "chasten",
+		"dancing", "darling", "decimal", "dietary", "diluent",
+		"earplug", "elastic", "encrypt", "envious", "epsilon",
+		"factory", "failure", "fireman", "flicker", "florist",
+		"gambler", "gateway", "gelatin", "glacier", "gourmet", 
+		"haircut", "harmful", "helpful", "heroism", "history",
+		"impacts", "improve", "include", "inflate", "isolate", 
+		"janitor", "jasmine", "jealous", "journal", "jukebox",
+		"ketchup", "keyword", "kingdom", "kitchen", "kolache",
+];

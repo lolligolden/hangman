@@ -115,7 +115,7 @@ function chooseWordLevel1() {
     console.log(playWordlvl1);
     if (playHangman.includes(playWordlvl1)) {
         guess.textContent = `If the letters below have turned blue, a word has
-        been chosen. Pick a letter to begin`;
+        been chosen. Pick a letter to begin!`;
     }
     pickLettersRow1.style.color = "blue";
     pickLettersRow2.style.color = "blue";
@@ -160,8 +160,10 @@ function chooseWordLevel2() {
     playHangman.pop();
     playHangman.push(playWordlvl2);
     console.log(playWordlvl2);
-    pickLettersRow1.style.color = "blue";
-    pickLettersRow2.style.color = "blue";
+    pickLettersRow1.style.color = "darkblue";
+    pickLettersRow1.style.fontWeight = "bold";
+    pickLettersRow2.style.color = "darkblue";
+    pickLettersRow2.style.fontWeight = "bold";
     activateletters();
     const addSquarelvl2 = document.createElement('span');
     addSquarelvl2.setAttribute('id', 'L6');
