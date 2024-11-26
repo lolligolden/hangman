@@ -29,7 +29,7 @@ const LEVEL1 = ["acorn", "after", "agile", "aisle",
                 "zebra", "zesty", "zingy", "zones"];
 
 const LEVEL2 = ["abound", "action", "actual", "adjust", "adrift", "anchor",
-                "barley", "become", "behold", "bestow", "broken", "budget",
+                "barley", "behold", "bestow", "broken", "budget",
                 "cajole", "cardio", "chisel",   
                 "dainty", "design", "diatom", "digest", "donate", "dorsal", "dragon", 
                 "editor", "enigma",
@@ -91,6 +91,9 @@ const level1Letter3 = letter[2];
 const level1Letter4 = letter[3];
 const level1Letter5 = letter[4];
 const level1Letter6 = letter[5];
+level1Letter6.style = "display:none";
+const level1Letter7 = letter[6];
+level1Letter7.style = "display:none";
 
 
 let playHangman = [];
@@ -195,10 +198,8 @@ function chooseWordLevel2() {
     pickLettersRow1.style.fontWeight = "bold";
     pickLettersRow2.style.color = "darkblue";
     pickLettersRow2.style.fontWeight = "bold";
+    level1Letter6.style = "display:flex";
     activateletters();
-    const addSquarelvl2 = document.createElement('span');
-    addSquarelvl2.setAttribute('id', 'L6');
-    level1Letter5.insertAdjacentElement('afterend', addSquarelvl2);
     numberTries = 0;
     tryAgain = 0;
     tries.textContent = `# of Tries: ${7}`;
@@ -247,13 +248,9 @@ function chooseWordLevel3() {
     pickLettersRow1.style.fontWeight = "bold";
     pickLettersRow2.style.color = "darkblue";
     pickLettersRow2.style.fontWeight = "bold";
+    level1Letter6.style = "display:flex"
+    level1Letter7.style = "display:flex";
     activateletters();
-    const addSquarelvl2 = document.createElement('span');
-    addSquarelvl2.setAttribute('id', 'L6');
-    level1Letter5.insertAdjacentElement('afterend', addSquarelvl2);
-    const addSquarelvl3 = document.createElement('span');
-    addSquarelvl3.setAttribute('id', 'L7');
-    level1Letter6.insertAdjacentElement('afterend', addSquarelvl3);
     numberTries = 0;
     tryAgain = 0;
     tries.textContent = `# of Tries: ${8}`;
@@ -660,7 +657,7 @@ function actived() {
         };
         tries.textContent = `# of Tries: ${7 - numberTries}`;
         displayHangman();
-        winnerLoser();
+        winnerLoserLvl2();
     }
 
     if (playHangman.includes(playWordlvl3)) {
@@ -1138,7 +1135,7 @@ function activei() {
     if (playHangman.includes(playWordlvl2)) {
         let level1Letter6 = document.getElementById('L6');
         if (playWordlvl2.charAt(0) === "i") {
-            level1Letter2.textContent = "I"; 
+            level1Letter1.textContent = "I"; 
         }
         if (playWordlvl2.charAt(1) === "i") {
             level1Letter2.textContent = "I"; 
@@ -1776,33 +1773,33 @@ function activeo() {
 
     if (playHangman.includes(playWordlvl3)) {
         let level1Letter7 = document.getElementById('L7');
-        if (playWordlvl2.charAt(0) === "o") {
+        if (playWordlvl3.charAt(0) === "o") {
             level1Letter1.textContent = "O"; 
         }
-        if (playWordlvl2.charAt(1) === "o") {
+        if (playWordlvl3.charAt(1) === "o") {
             level1Letter2.textContent = "O"; 
         }
-        if (playWordlvl2.charAt(2) === "o") {
+        if (playWordlvl3.charAt(2) === "o") {
             level1Letter3.textContent = "O"; 
         }
-        if (playWordlvl2.charAt(3) === "o") {
+        if (playWordlvl3.charAt(3) === "o") {
             level1Letter4.textContent = "O"; 
         }
-        if (playWordlvl2.charAt(4) === "o") {
+        if (playWordlvl3.charAt(4) === "o") {
             level1Letter5.textContent = "O"; 
         }
-        if (playWordlvl2.charAt(5) === "o") {
+        if (playWordlvl3.charAt(5) === "o") {
             level1Letter6.textContent = "O"; 
         }
-        if (playWordlvl2.charAt(6) === "o") {
+        if (playWordlvl3.charAt(6) === "o") {
             level1Letter7.textContent = "O"; 
         }
-        if (!playWordlvl2.includes("o")) {
+        if (!playWordlvl3.includes("o")) {
             guess.textContent = "Please try again!";
             tryAgain++;
         }   
         setTimeout(function() {guess.textContent = ""}, 3000);
-        if (playHangman.includes(playWordlvl2)) {
+        if (playHangman.includes(playWordlvl3)) {
             numberTries++;
         };
         tries.textContent = `# of Tries: ${8 - numberTries}`;
@@ -2968,9 +2965,7 @@ function winnerLoser() {
 }
 
 function winnerLoserLvl2() {
-    let level1Letter6 = document.getElementById('L6');
-
-    if ((numberTries <= 6) && ((level1Letter1.textContent === playWordlvl2[0].toUpperCase()) && (level1Letter2.textContent === playWordlvl2[1].toUpperCase()) && (level1Letter3.textContent === playWordlvl2[2].toUpperCase())
+    if ((numberTries <= 7) && ((level1Letter1.textContent === playWordlvl2[0].toUpperCase()) && (level1Letter2.textContent === playWordlvl2[1].toUpperCase()) && (level1Letter3.textContent === playWordlvl2[2].toUpperCase())
         && (level1Letter4.textContent === playWordlvl2[3].toUpperCase()) && (level1Letter5.textContent === playWordlvl2[4].toUpperCase())) 
         && (level1Letter6.textContent === playWordlvl2[5].toUpperCase())) {
         winner.textContent = "WINNER!!! YOU WIN HANGMAN!";
@@ -2983,7 +2978,7 @@ function winnerLoserLvl2() {
             lvl3btn.addEventListener('click', chooseWordLevel3);
             nextLevel.textContent = "Press the Level 3 button to play the next word";
         }                       
-    } else if ((numberTries === 6) && ((level1Letter1.textContent != playWordlvl2[0]) || (level1Letter2.textContent != playWordlvl2[1]) || (level1Letter3.textContent != playWordlvl2[2])
+    } else if ((numberTries === 7) && ((level1Letter1.textContent != playWordlvl2[0]) || (level1Letter2.textContent != playWordlvl2[1]) || (level1Letter3.textContent != playWordlvl2[2])
             || (level1Letter4.textContent != playWordlvl2[3]) || (level1Letter5.textContent != playWordlvl2[4]) || (level1Letter6.textContent != playWordlvl2[5]))) {
             winner.textContent = `SORRY, YOU ARE OUT OF GUESSES! YOU ARE HUNG!\n The correct answer was ${playWordlvl2}`;
             winner.style.color = "green";
@@ -2993,19 +2988,21 @@ function winnerLoserLvl2() {
 }
 
 function winnerLoserLvl3() {
-    let level1Letter7 = document.getElementById('L7');
-
-    if ((numberTries <= 6) && ((level1Letter1.textContent === playWordlvl3[0].toUpperCase()) && (level1Letter2.textContent === playWordlvl3[1].toUpperCase()) && (level1Letter3.textContent === playWordlvl3[2].toUpperCase())
-        && (level1Letter4.textContent === playWordlvl3[3].toUpperCase()) && (level1Letter5.textContent === playWordlvl3[4].toUpperCase())) 
-        && (level1Letter6.textContent === playWordlvl3[5].toUpperCase()) && (level1Letter7.textContent === playWordlvl3[6])) {
+    console.log(`numberTries: ${numberTries}/n`, playWordlvl3[0], playWordlvl3[1], playWordlvl3[2], playWordlvl3[3], playWordlvl3[4], playWordlvl3[5], playWordlvl3[6])
+    console.log(`level1Letter1.textContent: ${level1Letter1.textContent}`, `level1Letter2.textContent: ${level1Lette2.textContent}`, `level1Letter2.textContent: ${level1Letter2.textContent}`,`level1Letter3.textContent: ${level1Letter3.textContent}`, `level1Letter4.textContent: ${level1Letter4.textContent}`, `level1Letter5.textContent: ${level1Letter5.textContent}`, `level1Letter6.textContent: ${level1Letter6.textContent}`, `level1Letter7.textContent: ${level1Letter7.textContent}`)
+    if ((numberTries <= 8) && ((level1Letter1.textContent === playWordlvl3[0].toUpperCase()) && (level1Letter2.textContent === playWordlvl3[1].toUpperCase()) && (level1Letter3.textContent === playWordlvl3[2].toUpperCase())
+        && (level1Letter4.textContent === playWordlvl3[3].toUpperCase()) && (level1Letter5.textContent === playWordlvl3[4].toUpperCase()) 
+        && (level1Letter6.textContent === playWordlvl3[5].toUpperCase()) && (level1Letter7.textContent === playWordlvl3[6]))) {
         winner.textContent = "WINNER!!! YOU WIN HANGMAN!";
         moveAnnouncement();
-        if (playHangman.includes(playWordlvl3)) {
-            resetSpan.innerHTML = "Would you like to play again?  Press the Reset Button";
-        }  
-    } else if ((numberTries === 6) && ((level1Letter1.textContent != playWordlvl3[0]) || (level1Letter2.textContent != playWordlvl3[1]) || (level1Letter3.textContent != playWordlvl3[2])
+        // if (playHangman.includes(playWordlvl3)) {
+        //     resetSpan.innerHTML = "";
+        //     resetSpan.removeChild(lvl3btn);
+        //     nextLevel.textContent = "Would you like to play again?  Press the Reset Button";
+        // }  
+    } else if ((numberTries === 8) && ((level1Letter1.textContent != playWordlvl3[0]) || (level1Letter2.textContent != playWordlvl3[1]) || (level1Letter3.textContent != playWordlvl3[2])
             || (level1Letter4.textContent != playWordlvl3[3]) || (level1Letter5.textContent != playWordlvl3[4]) || (level1Letter6.textContent != playWordlvl3[5]) || (level1Letter7.textContent != playWordlvl3[6]))) {
-            winner.textContent = `SORRY, YOU ARE OUT OF GUESSES! YOU ARE HUNG!\n The correct answer was ${playWordlvl2}`;
+            winner.textContent = `SORRY, YOU ARE OUT OF GUESSES! YOU ARE HUNG!\n The correct answer was ${playWordlvl3}`;
             winner.style.color = "green";
             winner.style.fontWeight = 'bold';
             winner.style.fontSize = 'large';

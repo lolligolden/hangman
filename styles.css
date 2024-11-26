@@ -99,7 +99,9 @@ img {
 #numberTries {
     padding: 5px;
     color: green;
-    font-weight: bold;
+    font-weight: bolder;
+    font-size: larger;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 #buttons {
@@ -135,6 +137,7 @@ img {
     justify-content: center;
     font-weight: bolder;
     font-size: larger;
+    color: white;
 }
 
 
