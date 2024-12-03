@@ -320,7 +320,7 @@ function activea() {
         if ((playHangman.includes(playWordlvl1))) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${6 - numberTries}`;
+        tries.textContent = `# of Tries: ${8 - numberTries}`;
         displayHangman();
         winnerLoser();
     }
@@ -353,7 +353,7 @@ function activea() {
         if (playHangman.includes(playWordlvl2)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${7 - numberTries}`;
+        tries.textContent = `# of Tries: ${9 - numberTries}`;
         displayHangman();
         winnerLoserLvl2();
     }
@@ -389,7 +389,7 @@ function activea() {
         if (playHangman.includes(playWordlvl3)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${8 - numberTries}`;
+        tries.textContent = `# of Tries: ${10 - numberTries}`;
         displayHangman();    
         winnerLoserLvl3();
     }
@@ -421,7 +421,7 @@ function activeb() {
         if (playHangman.includes(playWordlvl1)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${6 - numberTries}`;
+        tries.textContent = `# of Tries: ${8 - numberTries}`;
         displayHangman();
         winnerLoser();
     }
@@ -454,7 +454,7 @@ function activeb() {
         if (playHangman.includes(playWordlvl2)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${7 - numberTries}`;
+        tries.textContent = `# of Tries: ${9 - numberTries}`;
         displayHangman();
         winnerLoserLvl2();
     }
@@ -490,7 +490,7 @@ function activeb() {
         if (playHangman.includes(playWordlvl3)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${8 - numberTries}`;
+        tries.textContent = `# of Tries: ${10 - numberTries}`;
         displayHangman();
         winnerLoserLvl3();
     }
@@ -522,7 +522,7 @@ function activec() {
         if (playHangman.includes(playWordlvl1)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${6 - numberTries}`;
+        tries.textContent = `# of Tries: ${8 - numberTries}`;
         displayHangman();
         winnerLoser();
     }
@@ -554,7 +554,7 @@ function activec() {
         if (playHangman.includes(playWordlvl2)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${7 - numberTries}`;
+        tries.textContent = `# of Tries: ${9 - numberTries}`;
         displayHangman();
         winnerLoserLvl2();
     }
@@ -590,7 +590,7 @@ function activec() {
         if (playHangman.includes(playWordlvl3)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${8 - numberTries}`;
+        tries.textContent = `# of Tries: ${10 - numberTries}`;
         displayHangman();
         winnerLoserLvl3();
     }
@@ -622,7 +622,7 @@ function actived() {
         if (playHangman.includes(playWordlvl1)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${6 - numberTries}`;
+        tries.textContent = `# of Tries: ${8 - numberTries}`;
         displayHangman();
         winnerLoser();
     }
@@ -655,7 +655,7 @@ function actived() {
         if (playHangman.includes(playWordlvl2)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${7 - numberTries}`;
+        tries.textContent = `# of Tries: ${9 - numberTries}`;
         displayHangman();
         winnerLoserLvl2();
     }
@@ -691,7 +691,7 @@ function actived() {
         if (playHangman.includes(playWordlvl3)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${8 - numberTries}`;
+        tries.textContent = `# of Tries: ${10 - numberTries}`;
         displayHangman();
         winnerLoserLvl3();
     }
@@ -723,7 +723,7 @@ function activee() {
         if (playHangman.includes(playWordlvl1)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${6 - numberTries}`;
+        tries.textContent = `# of Tries: ${8 - numberTries}`;
         displayHangman();
         winnerLoser();
     }
@@ -756,7 +756,7 @@ function activee() {
         if (playHangman.includes(playWordlvl2)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${7 - numberTries}`;
+        tries.textContent = `# of Tries: ${9 - numberTries}`;
         displayHangman();
         winnerLoserLvl2();
     }
@@ -792,7 +792,7 @@ function activee() {
         if (playHangman.includes(playWordlvl3)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${8 - numberTries}`;
+        tries.textContent = `# of Tries: ${10 - numberTries}`;
         displayHangman();
         winnerLoserLvl3();
     }
@@ -824,7 +824,7 @@ function activef() {
         if (playHangman.includes(playWordlvl1)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${6 - numberTries}`;
+        tries.textContent = `# of Tries: ${8 - numberTries}`;
         displayHangman();
         winnerLoser();
     }
@@ -857,7 +857,7 @@ function activef() {
         if (playHangman.includes(playWordlvl2)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${7 - numberTries}`;
+        tries.textContent = `# of Tries: ${9 - numberTries}`;
         displayHangman();
         winnerLoserLvl2();
     }
@@ -893,7 +893,7 @@ function activef() {
         if (playHangman.includes(playWordlvl3)) {
             numberTries++;   
         }
-        tries.textContent = `# of Tries: ${8 - numberTries}`;
+        tries.textContent = `# of Tries: ${10 - numberTries}`;
         displayHangman();
         winnerLoserLvl3();
     }   
@@ -925,7 +925,7 @@ function activeg() {
         if (playHangman.includes(playWordlvl1)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${6 - numberTries}`;
+        tries.textContent = `# of Tries: ${8 - numberTries}`;
         displayHangman();
         winnerLoser();
     }
@@ -958,7 +958,7 @@ function activeg() {
         if (playHangman.includes(playWordlvl2)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${7 - numberTries}`;
+        tries.textContent = `# of Tries: ${9 - numberTries}`;
         displayHangman();
         winnerLoserLvl2();
     }
@@ -994,7 +994,7 @@ function activeg() {
         if (playHangman.includes(playWordlvl3)) {
             numberTries++;   
         }
-        tries.textContent = `# of Tries: ${8 - numberTries}`;
+        tries.textContent = `# of Tries: ${10 - numberTries}`;
         displayHangman();
         winnerLoserLvl3();
     }
@@ -1026,7 +1026,7 @@ function activeh() {
         if (playHangman.includes(playWordlvl1)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${6 - numberTries}`;
+        tries.textContent = `# of Tries: ${8 - numberTries}`;
         displayHangman();
         winnerLoser();
     }
@@ -1059,7 +1059,7 @@ function activeh() {
         if (playHangman.includes(playWordlvl2)){ 
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${7 - numberTries}`;
+        tries.textContent = `# of Tries: ${9 - numberTries}`;
         displayHangman();
         winnerLoserLvl2();
     }
@@ -1095,7 +1095,7 @@ function activeh() {
         if (playHangman.includes(playWordlvl3)) {
             numberTries++;    
         }
-        tries.textContent = `# of Tries: ${8 - numberTries}`;
+        tries.textContent = `# of Tries: ${10 - numberTries}`;
         displayHangman();
         winnerLoserLvl3();
     }
@@ -1127,7 +1127,7 @@ function activei() {
         if (playHangman.includes(playWordlvl1)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${6 - numberTries}`;
+        tries.textContent = `# of Tries: ${8 - numberTries}`;
         displayHangman();
         winnerLoser();
     }
@@ -1160,7 +1160,7 @@ function activei() {
         if (playHangman.includes(playWordlvl2)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${7 - numberTries}`;
+        tries.textContent = `# of Tries: ${9 - numberTries}`;
         displayHangman();
         winnerLoserLvl2();
     }
@@ -1196,7 +1196,7 @@ function activei() {
         if (playHangman.includes(playWordlvl3)) {
             numberTries++;   
         }
-        tries.textContent = `# of Tries: ${8 - numberTries}`;
+        tries.textContent = `# of Tries: ${10 - numberTries}`;
         displayHangman();
         winnerLoserLvl3();
     }
@@ -1228,7 +1228,7 @@ function activej() {
         if (playHangman.includes(playWordlvl1)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${6 - numberTries}`;
+        tries.textContent = `# of Tries: ${8 - numberTries}`;
         displayHangman();
         winnerLoser();
     }
@@ -1261,7 +1261,7 @@ function activej() {
         if (playHangman.includes(playWordlvl2)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${7 - numberTries}`;
+        tries.textContent = `# of Tries: ${9 - numberTries}`;
         displayHangman();
         winnerLoserLvl2();
     }
@@ -1297,7 +1297,7 @@ function activej() {
         if (playHangman.includes(playWordlvl3)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${8 - numberTries}`;
+        tries.textContent = `# of Tries: ${10 - numberTries}`;
         displayHangman();
         winnerLoserLvl3();
     }
@@ -1329,7 +1329,7 @@ function activek() {
         if (playHangman.includes(playWordlvl1)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${6 - numberTries}`;
+        tries.textContent = `# of Tries: ${8 - numberTries}`;
         displayHangman();
         winnerLoser();
     }
@@ -1362,7 +1362,7 @@ function activek() {
         if (playHangman.includes(playWordlvl2)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${7 - numberTries}`;
+        tries.textContent = `# of Tries: ${9 - numberTries}`;
         displayHangman();
         winnerLoserLvl2();
      }
@@ -1398,7 +1398,7 @@ function activek() {
         if (playHangman.includes(playWordlvl3)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${8 - numberTries}`;
+        tries.textContent = `# of Tries: ${10 - numberTries}`;
         displayHangman();
         winnerLoserLvl3();
     }
@@ -1430,7 +1430,7 @@ function activel() {
         if (playHangman.includes(playWordlvl1)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${6 - numberTries}`;
+        tries.textContent = `# of Tries: ${8 - numberTries}`;
         displayHangman();
         winnerLoser();
     }
@@ -1463,7 +1463,7 @@ function activel() {
         if (playHangman.includes(playWordlvl2)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${7 - numberTries}`;
+        tries.textContent = `# of Tries: ${9 - numberTries}`;
         displayHangman();
         winnerLoserLvl2();
     }
@@ -1499,7 +1499,7 @@ function activel() {
         if (playHangman.includes(playWordlvl3)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${8 - numberTries}`;
+        tries.textContent = `# of Tries: ${10 - numberTries}`;
         displayHangman();
         winnerLoserLvl3();
     }
@@ -1531,7 +1531,7 @@ function activem() {
         if (playHangman.includes(playWordlvl1)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${6 - numberTries}`;
+        tries.textContent = `# of Tries: ${8 - numberTries}`;
         displayHangman();
         winnerLoser();
     }
@@ -1564,7 +1564,7 @@ function activem() {
     if (playHangman.includes(playWordlvl2)) {
         numberTries++;
     };
-    tries.textContent = `# of Tries: ${7 - numberTries}`;
+    tries.textContent = `# of Tries: ${9 - numberTries}`;
     displayHangman();
     winnerLoserLvl2();
     }
@@ -1600,7 +1600,7 @@ function activem() {
         if (playHangman.includes(playWordlvl3)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${8 - numberTries}`;
+        tries.textContent = `# of Tries: ${10 - numberTries}`;
         displayHangman();
         winnerLoserLvl3();
     }
@@ -1632,7 +1632,7 @@ function activen() {
         if (playHangman.includes(playWordlvl1)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${6 - numberTries}`;
+        tries.textContent = `# of Tries: ${8 - numberTries}`;
         displayHangman();
         winnerLoser();
     }
@@ -1665,7 +1665,7 @@ function activen() {
         if (playHangman.includes(playWordlvl2)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${7 - numberTries}`;
+        tries.textContent = `# of Tries: ${9 - numberTries}`;
         displayHangman();
         winnerLoserLvl2();
         }
@@ -1701,7 +1701,7 @@ function activen() {
         if (playHangman.includes(playWordlvl3)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${8 - numberTries}`;
+        tries.textContent = `# of Tries: ${10 - numberTries}`;
         displayHangman();
         winnerLoserLvl3();
     }
@@ -1733,7 +1733,7 @@ function activeo() {
         if (playHangman.includes(playWordlvl1)) { 
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${6 - numberTries}`;
+        tries.textContent = `# of Tries: ${8 - numberTries}`;
         displayHangman();
         winnerLoser();
     }
@@ -1766,7 +1766,7 @@ function activeo() {
         if (playHangman.includes(playWordlvl2)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${7 - numberTries}`;
+        tries.textContent = `# of Tries: ${9 - numberTries}`;
         displayHangman();
         winnerLoserLvl2();
     }
@@ -1802,7 +1802,7 @@ function activeo() {
         if (playHangman.includes(playWordlvl3)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${8 - numberTries}`;
+        tries.textContent = `# of Tries: ${10 - numberTries}`;
         displayHangman();
         winnerLoserLvl3();
     }
@@ -1834,7 +1834,7 @@ function activep() {
         if (playHangman.includes(playWordlvl1)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${6 - numberTries}`;
+        tries.textContent = `# of Tries: ${8 - numberTries}`;
         displayHangman();
         winnerLoser();
     }
@@ -1867,7 +1867,7 @@ function activep() {
         if (playHangman.includes(playWordlvl2)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${7 - numberTries}`;
+        tries.textContent = `# of Tries: ${9 - numberTries}`;
         displayHangman();
         winnerLoserLvl2();
     }
@@ -1903,7 +1903,7 @@ function activep() {
         if (playHangman.includes(playWordlvl3)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${8 - numberTries}`;
+        tries.textContent = `# of Tries: ${10 - numberTries}`;
         displayHangman();
         winnerLoserLvl3();
     }
@@ -1935,7 +1935,7 @@ function activeq() {
         if (playHangman.includes(playWordlvl1)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${6 - numberTries}`;
+        tries.textContent = `# of Tries: ${8 - numberTries}`;
         displayHangman();
         winnerLoser();
     }
@@ -1968,7 +1968,7 @@ function activeq() {
         if (playHangman.includes(playWordlvl2)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${7 - numberTries}`;
+        tries.textContent = `# of Tries: ${9 - numberTries}`;
         displayHangman();
         winnerLoserLvl2();
     }
@@ -2004,7 +2004,7 @@ function activeq() {
         if (playHangman.includes(playWordlvl3)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${8 - numberTries}`;
+        tries.textContent = `# of Tries: ${10 - numberTries}`;
         displayHangman();
         winnerLoserLvl3();
     }
@@ -2036,7 +2036,7 @@ function activer() {
         if (playHangman.includes(playWordlvl1)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${6 - numberTries}`;
+        tries.textContent = `# of Tries: ${8 - numberTries}`;
         displayHangman();
         winnerLoser();
     }
@@ -2069,7 +2069,7 @@ function activer() {
         if (playHangman.includes(playWordlvl2)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${7 - numberTries}`;
+        tries.textContent = `# of Tries: ${9 - numberTries}`;
         displayHangman();
         winnerLoserLvl2();
     }
@@ -2105,7 +2105,7 @@ function activer() {
         if (playHangman.includes(playWordlvl3)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${8 - numberTries}`;
+        tries.textContent = `# of Tries: ${10 - numberTries}`;
         displayHangman();
         winnerLoserLvl3();
     }
@@ -2137,7 +2137,7 @@ function actives() {
         if (playHangman.includes(playWordlvl1)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${6 - numberTries}`;
+        tries.textContent = `# of Tries: ${8 - numberTries}`;
         displayHangman();
         winnerLoser();
     }
@@ -2170,7 +2170,7 @@ function actives() {
         if (playHangman.includes(playWordlvl2)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${7 - numberTries}`;
+        tries.textContent = `# of Tries: ${9 - numberTries}`;
         displayHangman();
         winnerLoserLvl2();
     }
@@ -2206,7 +2206,7 @@ function actives() {
         if (playHangman.includes(playWordlvl3)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${8 - numberTries}`;
+        tries.textContent = `# of Tries: ${10 - numberTries}`;
         displayHangman();
         winnerLoserLvl3();
     }
@@ -2238,7 +2238,7 @@ function activet() {
         if (playHangman.includes(playWordlvl1)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${6 - numberTries}`;
+        tries.textContent = `# of Tries: ${8 - numberTries}`;
         displayHangman();
         winnerLoser();
     }
@@ -2271,7 +2271,7 @@ function activet() {
         if (playHangman.includes(playWordlvl2)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${7 - numberTries}`;
+        tries.textContent = `# of Tries: ${9 - numberTries}`;
         displayHangman();
         winnerLoserLvl2();
     }
@@ -2307,7 +2307,7 @@ function activet() {
         if (playHangman.includes(playWordlvl3)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${8 - numberTries}`;
+        tries.textContent = `# of Tries: ${10 - numberTries}`;
         displayHangman();
         winnerLoserLvl3();
     }
@@ -2339,7 +2339,7 @@ function activeu() {
         if (playHangman.includes(playWordlvl1)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${6 - numberTries}`;
+        tries.textContent = `# of Tries: ${8 - numberTries}`;
         displayHangman();
         winnerLoser();
     }
@@ -2372,7 +2372,7 @@ function activeu() {
         if (playHangman.includes(playWordlvl2)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${7 - numberTries}`;
+        tries.textContent = `# of Tries: ${9 - numberTries}`;
         displayHangman();
         winnerLoserLvl2();
     }
@@ -2408,7 +2408,7 @@ function activeu() {
         if (playHangman.includes(playWordlvl3)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${8 - numberTries}`;
+        tries.textContent = `# of Tries: ${10 - numberTries}`;
         displayHangman();
         winnerLoserLvl3();
     }
@@ -2440,7 +2440,7 @@ function activev() {
         if (playHangman.includes(playWordlvl1)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${6 - numberTries}`;
+        tries.textContent = `# of Tries: ${8 - numberTries}`;
         displayHangman();
         winnerLoser();
     }
@@ -2473,7 +2473,7 @@ function activev() {
         if (playHangman.includes(playWordlvl2)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${7 - numberTries}`;
+        tries.textContent = `# of Tries: ${9 - numberTries}`;
         displayHangman();
         winnerLoserLvl2();
     }
@@ -2509,7 +2509,7 @@ function activev() {
         if (playHangman.includes(playWordlvl3)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${8 - numberTries}`;
+        tries.textContent = `# of Tries: ${10 - numberTries}`;
         displayHangman();
         winnerLoserLvl3();
     }
@@ -2541,7 +2541,7 @@ function activew() {
         if (playHangman.includes(playWordlvl1)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${6 - numberTries}`;
+        tries.textContent = `# of Tries: ${8 - numberTries}`;
         displayHangman();
         winnerLoser();
     }
@@ -2574,7 +2574,7 @@ function activew() {
         if (playHangman.includes(playWordlvl2)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${7 - numberTries}`;
+        tries.textContent = `# of Tries: ${9 - numberTries}`;
         displayHangman();
         winnerLoserLvl2();
     }
@@ -2610,7 +2610,7 @@ function activew() {
         if (playHangman.includes(playWordlvl3)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${8 - numberTries}`;
+        tries.textContent = `# of Tries: ${10 - numberTries}`;
         displayHangman();
         winnerLoserLvl3();
     }
@@ -2642,7 +2642,7 @@ function activex() {
         if (playHangman.includes(playWordlvl1)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${6 - numberTries}`;
+        tries.textContent = `# of Tries: ${8 - numberTries}`;
         displayHangman();
         winnerLoser();
     }
@@ -2675,7 +2675,7 @@ function activex() {
         if (playHangman.includes(playWordlvl2)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${7 - numberTries}`;
+        tries.textContent = `# of Tries: ${9 - numberTries}`;
         displayHangman();
         winnerLoserLvl2();
     }
@@ -2711,7 +2711,7 @@ function activex() {
         if (playHangman.includes(playWordlvl3)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${8 - numberTries}`;
+        tries.textContent = `# of Tries: ${10 - numberTries}`;
         displayHangman();
         winnerLoserLvl3();
     }
@@ -2743,7 +2743,7 @@ function activey() {
         if (playHangman.includes(playWordlvl1)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${6 - numberTries}`;
+        tries.textContent = `# of Tries: ${8 - numberTries}`;
         displayHangman();
         winnerLoser();
     }
@@ -2776,7 +2776,7 @@ function activey() {
         if (playHangman.includes(playWordlvl2)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${7 - numberTries}`;
+        tries.textContent = `# of Tries: ${9 - numberTries}`;
         displayHangman();
         winnerLoserLvl2();
     }
@@ -2812,7 +2812,7 @@ function activey() {
         if (playHangman.includes(playWordlvl3)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${8 - numberTries}`;
+        tries.textContent = `# of Tries: ${10 - numberTries}`;
         displayHangman();
         winnerLoserLvl3();
     }
@@ -2844,7 +2844,7 @@ function activez() {
         if (playHangman.includes(playWordlvl3)) {
             numberTries++;
         };
-        tries.textContent = `# of Tries: ${6 - numberTries}`;
+        tries.textContent = `# of Tries: ${8 - numberTries}`;
         displayHangman();
         winnerLoser();
     }
@@ -2877,7 +2877,7 @@ function activez() {
     if (playHangman.includes(playWordlvl2)) {
         numberTries++;
     };
-    tries.textContent = `# of Tries: ${7 - numberTries}`;
+    tries.textContent = `# of Tries: ${9 - numberTries}`;
     displayHangman();
     winnerLoserLvl2();
     }
@@ -2913,7 +2913,7 @@ function activez() {
         if (playHangman.includes(playWordlvl3)) {
         numberTries++;
         };
-        tries.textContent = `# of Tries: ${8 - numberTries}`;
+        tries.textContent = `# of Tries: ${10 - numberTries}`;
         displayHangman();
         winnerLoserLvl3();
     }
@@ -2944,7 +2944,7 @@ function displayHangman() {
  }
 
 function winnerLoser() {
-    if ((numberTries <= 6) && ((level1Letter1.textContent === playWordlvl1[0].toUpperCase()) && (level1Letter2.textContent === playWordlvl1[1].toUpperCase()) && (level1Letter3.textContent === playWordlvl1[2].toUpperCase())
+    if ((numberTries <= 8) && ((level1Letter1.textContent === playWordlvl1[0].toUpperCase()) && (level1Letter2.textContent === playWordlvl1[1].toUpperCase()) && (level1Letter3.textContent === playWordlvl1[2].toUpperCase())
         && (level1Letter4.textContent === playWordlvl1[3].toUpperCase()) && (level1Letter5.textContent === playWordlvl1[4].toUpperCase()))) {
         winner.textContent = "WINNER!!! YOU WIN HANGMAN!";
         moveAnnouncement();
@@ -2955,7 +2955,7 @@ function winnerLoser() {
             lvl2btn.addEventListener('click', chooseWordLevel2);
             nextLevel.textContent = "Press the Level 2 button to play the next word";
         }                       
-    } else if ((numberTries === 6) && ((level1Letter1.textContent != playWordlvl1[0]) || (level1Letter2.textContent != playWordlvl1[1]) || (level1Letter3.textContent != playWordlvl1[2])
+    } else if ((numberTries === 8) && ((level1Letter1.textContent != playWordlvl1[0]) || (level1Letter2.textContent != playWordlvl1[1]) || (level1Letter3.textContent != playWordlvl1[2])
         || (level1Letter4.textContent != playWordlvl1[3]) || (level1Letter5.textContent != playWordlvl1[4]))) {
         winner.textContent = `SORRY! YOU ARE HUNG!\nThe correct answer was ${playWordlvl1.toUpperCase()}`;
         winner.style.color = "yellow";
@@ -2965,7 +2965,7 @@ function winnerLoser() {
 } 
 
 function winnerLoserLvl2() {
-    if ((numberTries <= 7) && ((level1Letter1.textContent === playWordlvl2[0].toUpperCase()) && (level1Letter2.textContent === playWordlvl2[1].toUpperCase()) && (level1Letter3.textContent === playWordlvl2[2].toUpperCase())
+    if ((numberTries <= 9) && ((level1Letter1.textContent === playWordlvl2[0].toUpperCase()) && (level1Letter2.textContent === playWordlvl2[1].toUpperCase()) && (level1Letter3.textContent === playWordlvl2[2].toUpperCase())
         && (level1Letter4.textContent === playWordlvl2[3].toUpperCase()) && (level1Letter5.textContent === playWordlvl2[4].toUpperCase())) 
         && (level1Letter6.textContent === playWordlvl2[5].toUpperCase())) {
         winner.textContent = "WINNER!!! YOU WIN HANGMAN!";
@@ -2978,7 +2978,7 @@ function winnerLoserLvl2() {
             lvl3btn.addEventListener('click', chooseWordLevel3);
             nextLevel.textContent = "Press the Level 3 button to play the next word";
         }                       
-    } else if ((numberTries === 7) && ((level1Letter1.textContent != playWordlvl2[0]) || (level1Letter2.textContent != playWordlvl2[1]) || (level1Letter3.textContent != playWordlvl2[2])
+    } else if ((numberTries === 9) && ((level1Letter1.textContent != playWordlvl2[0]) || (level1Letter2.textContent != playWordlvl2[1]) || (level1Letter3.textContent != playWordlvl2[2])
             || (level1Letter4.textContent != playWordlvl2[3]) || (level1Letter5.textContent != playWordlvl2[4]) || (level1Letter6.textContent != playWordlvl2[5]))) {
             winner.textContent = `SORRY! YOU ARE HUNG!\n The correct answer was ${playWordlvl2.toUpperCase()}`;
             winner.style.color = "yellow";
@@ -2988,7 +2988,7 @@ function winnerLoserLvl2() {
 }
 
 function winnerLoserLvl3() {
-    if ((numberTries <= 8) && ((level1Letter1.textContent === playWordlvl3[0].toUpperCase()) && (level1Letter2.textContent === playWordlvl3[1].toUpperCase()) && (level1Letter3.textContent === playWordlvl3[2].toUpperCase())
+    if ((numberTries <= 10) && ((level1Letter1.textContent === playWordlvl3[0].toUpperCase()) && (level1Letter2.textContent === playWordlvl3[1].toUpperCase()) && (level1Letter3.textContent === playWordlvl3[2].toUpperCase())
         && (level1Letter4.textContent === playWordlvl3[3].toUpperCase()) && (level1Letter5.textContent === playWordlvl3[4].toUpperCase()) 
         && (level1Letter6.textContent === playWordlvl3[5].toUpperCase()) && (level1Letter7.textContent === playWordlvl3[6].toUpperCase()))) {
         winner.textContent = "WINNER!!! YOU WIN HANGMAN!";
@@ -2997,7 +2997,7 @@ function winnerLoserLvl3() {
             resetSpan.innerHTML = "";
             nextLevel.textContent = "Would you like to play again?  Press the Reset Button";
         }  
-    } else if ((numberTries === 8) && ((level1Letter1.textContent != playWordlvl3[0]) || (level1Letter2.textContent != playWordlvl3[1]) || (level1Letter3.textContent != playWordlvl3[2])
+    } else if ((numberTries === 10) && ((level1Letter1.textContent != playWordlvl3[0]) || (level1Letter2.textContent != playWordlvl3[1]) || (level1Letter3.textContent != playWordlvl3[2])
             || (level1Letter4.textContent != playWordlvl3[3]) || (level1Letter5.textContent != playWordlvl3[4]) || (level1Letter6.textContent != playWordlvl3[5]) || (level1Letter7.textContent != playWordlvl3[6]))) {
             winner.textContent = `SORRY! YOU ARE HUNG!\nThe correct answer was ${playWordlvl3.toUpperCase()}`;
             winner.style.color = "yellow";
