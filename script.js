@@ -51,7 +51,7 @@ const LEVEL2 = ["abound", "action", "actual", "adjust", "adrift", "anchor",
                 "umpire", "unable", "unwrap", "upbeat", "uphold", "uptake", "urgent", "utopia", 
                 "vanish", "vector", "vendor", "verbal", "virtue", "visual", "vortex",
                 "waiter", "walker", "wanted", "warmth", "watery", "weight", "widget", "wisdom", 
-                "yarrow", "yellow", "yogurt", "yonder", 
+                "yogurt", "yonder", 
                 "zealot", "zodiac", "zombie"];
 
 const LEVEL3 = ["abdomen", "abolish", "abscond", "acquire", "acronym", 				
@@ -62,7 +62,7 @@ const LEVEL3 = ["abdomen", "abolish", "abscond", "acquire", "acronym",
                 "earplug", "elastic", "encrypt", "envious", "epsilon",
                 "factory", "failure", "fireman", "flicker", "florist",
                 "gambler", "gateway", "gelatin", "glacier", "gourmet", 
-                "haircut", "harmful", "helpful", "heroism", "history",
+                "haircut", "harmful", "heroism", "history",
                 "impacts", "improve", "include", "inflate", "isolate", 
                 "janitor", "jasmine", "jealous", "journal", "jukebox",
                 "ketchup", "keyword", "kingdom", "kitchen", "kolache",
@@ -2957,12 +2957,12 @@ function winnerLoser() {
         }                       
     } else if ((numberTries === 6) && ((level1Letter1.textContent != playWordlvl1[0]) || (level1Letter2.textContent != playWordlvl1[1]) || (level1Letter3.textContent != playWordlvl1[2])
         || (level1Letter4.textContent != playWordlvl1[3]) || (level1Letter5.textContent != playWordlvl1[4]))) {
-        winner.textContent = `SORRY, YOU ARE OUT OF GUESSES! YOU ARE HUNG!\n The correct answer was ${playWordlvl1}`;
-        winner.style.color = "green";
+        winner.textContent = `SORRY! YOU ARE HUNG!\nThe correct answer was ${playWordlvl1.toUpperCase()}`;
+        winner.style.color = "yellow";
         winner.style.fontWeight = 'bold';
         winner.style.fontSize = 'large';
     }
-}
+} 
 
 function winnerLoserLvl2() {
     if ((numberTries <= 7) && ((level1Letter1.textContent === playWordlvl2[0].toUpperCase()) && (level1Letter2.textContent === playWordlvl2[1].toUpperCase()) && (level1Letter3.textContent === playWordlvl2[2].toUpperCase())
@@ -2980,30 +2980,27 @@ function winnerLoserLvl2() {
         }                       
     } else if ((numberTries === 7) && ((level1Letter1.textContent != playWordlvl2[0]) || (level1Letter2.textContent != playWordlvl2[1]) || (level1Letter3.textContent != playWordlvl2[2])
             || (level1Letter4.textContent != playWordlvl2[3]) || (level1Letter5.textContent != playWordlvl2[4]) || (level1Letter6.textContent != playWordlvl2[5]))) {
-            winner.textContent = `SORRY, YOU ARE OUT OF GUESSES! YOU ARE HUNG!\n The correct answer was ${playWordlvl2}`;
-            winner.style.color = "green";
+            winner.textContent = `SORRY! YOU ARE HUNG!\n The correct answer was ${playWordlvl2.toUpperCase()}`;
+            winner.style.color = "yellow";
             winner.style.fontWeight = 'bold';
             winner.style.fontSize = 'large';
     }  
 }
 
 function winnerLoserLvl3() {
-    console.log(`numberTries: ${numberTries}/n`, playWordlvl3[0], playWordlvl3[1], playWordlvl3[2], playWordlvl3[3], playWordlvl3[4], playWordlvl3[5], playWordlvl3[6])
-    console.log(`level1Letter1.textContent: ${level1Letter1.textContent}`, `level1Letter2.textContent: ${level1Lette2.textContent}`, `level1Letter2.textContent: ${level1Letter2.textContent}`,`level1Letter3.textContent: ${level1Letter3.textContent}`, `level1Letter4.textContent: ${level1Letter4.textContent}`, `level1Letter5.textContent: ${level1Letter5.textContent}`, `level1Letter6.textContent: ${level1Letter6.textContent}`, `level1Letter7.textContent: ${level1Letter7.textContent}`)
     if ((numberTries <= 8) && ((level1Letter1.textContent === playWordlvl3[0].toUpperCase()) && (level1Letter2.textContent === playWordlvl3[1].toUpperCase()) && (level1Letter3.textContent === playWordlvl3[2].toUpperCase())
         && (level1Letter4.textContent === playWordlvl3[3].toUpperCase()) && (level1Letter5.textContent === playWordlvl3[4].toUpperCase()) 
-        && (level1Letter6.textContent === playWordlvl3[5].toUpperCase()) && (level1Letter7.textContent === playWordlvl3[6]))) {
+        && (level1Letter6.textContent === playWordlvl3[5].toUpperCase()) && (level1Letter7.textContent === playWordlvl3[6].toUpperCase()))) {
         winner.textContent = "WINNER!!! YOU WIN HANGMAN!";
         moveAnnouncement();
-        // if (playHangman.includes(playWordlvl3)) {
-        //     resetSpan.innerHTML = "";
-        //     resetSpan.removeChild(lvl3btn);
-        //     nextLevel.textContent = "Would you like to play again?  Press the Reset Button";
-        // }  
+        if (playHangman.includes(playWordlvl3)) {
+            resetSpan.innerHTML = "";
+            nextLevel.textContent = "Would you like to play again?  Press the Reset Button";
+        }  
     } else if ((numberTries === 8) && ((level1Letter1.textContent != playWordlvl3[0]) || (level1Letter2.textContent != playWordlvl3[1]) || (level1Letter3.textContent != playWordlvl3[2])
             || (level1Letter4.textContent != playWordlvl3[3]) || (level1Letter5.textContent != playWordlvl3[4]) || (level1Letter6.textContent != playWordlvl3[5]) || (level1Letter7.textContent != playWordlvl3[6]))) {
-            winner.textContent = `SORRY, YOU ARE OUT OF GUESSES! YOU ARE HUNG!\n The correct answer was ${playWordlvl3}`;
-            winner.style.color = "green";
+            winner.textContent = `SORRY! YOU ARE HUNG!\nThe correct answer was ${playWordlvl3.toUpperCase()}`;
+            winner.style.color = "yellow";
             winner.style.fontWeight = 'bold';
             winner.style.fontSize = 'large';
     }  
