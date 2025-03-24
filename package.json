@@ -16,5 +16,6 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.3"
-  }
+  },
+  "main": "script.js"
 }
