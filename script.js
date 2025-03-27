@@ -2921,25 +2921,25 @@ function activez() {
 
 function displayHangman() {
     if (tryAgain === 0) {
-        hangman.setAttribute('src', './public/images/hangmaninit.jpg');
+        hangman.setAttribute('src', 'images/hangmaninit.jpg');
     }
     if (tryAgain === 1) {
-        hangman.setAttribute('src', './public/images/hangmanhead.jpg');
+        hangman.setAttribute('src', 'images/hangmanhead.jpg');
     } 
     if (tryAgain === 2) {
-        hangman.setAttribute('src', './public/images/hangmantorso.jpg');
+        hangman.setAttribute('src', 'images/hangmantorso.jpg');
     } 
     if (tryAgain === 3) {
-        hangman.setAttribute('src', './public/images/hangmanLarm.jpg');
+        hangman.setAttribute('src', 'images/hangmanLarm.jpg');
     } 
     if (tryAgain === 4) {
-        hangman.setAttribute('src', './public/images/hangmanRarm.jpg');
+        hangman.setAttribute('src', 'images/hangmanRarm.jpg');
     } 
     if (tryAgain === 5) {
-        hangman.setAttribute('src', './public/images/hangmanLleg.jpg');
+        hangman.setAttribute('src', 'images/hangmanLleg.jpg');
     }
     if (tryAgain === 6) {
-        hangman.setAttribute('src', './public/images/hangmanRleg.jpg');
+        hangman.setAttribute('src', 'images/hangmanRleg.jpg');
     }
  }
 
